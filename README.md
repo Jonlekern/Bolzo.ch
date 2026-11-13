@@ -20,6 +20,10 @@ La page KLARSICHT est sur https://jonlekern.github.io/Bolzo.ch/klarsicht/
 Le logo et ses règles sont dans [`marque/`](marque/) : Overshoot Gentle Breeze,
 en rouge `#d3121b`.
 
+## Travailler avec ChatGPT
+
+Voir [`CHATGPT.md`](CHATGPT.md) : relier ChatGPT au repo et le message à lui donner.
+
 ## Organisation
 
 - **Un dossier par produit.** Chaque produit a sa page (`index.html`), ses images,
