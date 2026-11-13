@@ -8,6 +8,10 @@ Boutique en ligne suisse, en français et en allemand, prix en CHF.
 |---|---|---|
 | **KLARSHIT** : brosse anti-film gras pour vitres de voiture | [`klarshit/`](klarshit/) | Page de démonstration prête, version Shopify prête |
 
+## En ligne
+
+https://jonlekern.github.io/Bolzo.ch/ : ouvre directement la page KLARSHIT.
+
 ## Organisation
 
 - **Un dossier par produit.** Chaque produit a sa page (`index.html`), ses images,
@@ -16,6 +20,14 @@ Boutique en ligne suisse, en français et en allemand, prix en CHF.
   son dossier. Pour KLARSHIT : [`klarshit/README.md`](klarshit/README.md).
 - **Mettre une page sur Shopify** : suivre le guide du produit, par exemple
   [`klarshit/shopify/SHOPIFY.md`](klarshit/shopify/SHOPIFY.md).
+
+## Fichiers à la racine
+
+| Fichier | Rôle |
+|---|---|
+| `index.html` | Renvoie vers la page KLARSHIT, en attendant une vraie page d'accueil |
+| `.nojekyll` | Réglage technique pour GitHub Pages |
+| `.gitignore` | Fichiers système à ne pas envoyer sur GitHub |
 
 ## À ne jamais mettre ici
 

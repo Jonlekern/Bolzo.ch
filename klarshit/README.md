@@ -10,15 +10,18 @@ affichent seulement un message.
 **Pour Shopify**, suivre [`shopify/SHOPIFY.md`](shopify/SHOPIFY.md) : la page y
 existe déjà en section de thème, avec les lots branchés sur le panier.
 
-Page en ligne : https://jonlekern.github.io/klarshit/
+Page en ligne : https://jonlekern.github.io/Bolzo.ch/klarshit/
+
+Ce dossier fait partie du repo de la boutique **Bolzo.ch**. Tous les chemins
+de ce README partent du dossier `klarshit/`.
 
 ---
 
 ## À coller dans ChatGPT avant de lui demander une modification
 
-> Tu travailles sur `index.html` du repo `klarshit`. Lis d'abord le README du
-> repo et respecte sa charte graphique et toutes ses règles. Ne change que ce
-> que je te demande.
+> Tu travailles sur `klarshit/index.html` du repo `Bolzo.ch`. Lis d'abord
+> `klarshit/README.md` et respecte sa charte graphique et toutes ses règles.
+> Ne change que ce que je te demande.
 > Rends-moi le fichier complet, sans rien couper, et dis-moi en une liste ce que
 > tu as modifié.
 
@@ -178,7 +181,7 @@ prix différents :
 - **Les premières lignes du fichier** (`<meta>` et `<title>`). Elles servent
   aussi à l'aperçu de la page dans Claude.
 - **Le dossier `fonts/`** et ses licences (`OFL.txt`, `ISOCIRCLE-LICENCE.txt`).
-- **Le fichier `.nojekyll`**, nécessaire à GitHub Pages.
+- **Le fichier `.nojekyll`** à la racine du repo, nécessaire à GitHub Pages.
 - **`video/demo.mp4`** : la vidéo a été recadrée, ses emoji remplacés par des
   icônes et sa musique générée par `video/musique.py`. Pour la changer,
   demander à Johnny.
@@ -247,5 +250,4 @@ Ces éléments sont des exemples à remplacer avant une vraie boutique :
 | `video/demo.mp4` | Vidéo de démonstration, 36 secondes |
 | `video/musique.py` | Script qui génère la musique de la vidéo |
 | `fonts/` | Polices Malabard et Isocircle, avec leurs licences |
-| `.nojekyll` | Réglage technique pour GitHub Pages |
 | `shopify/` | Version Shopify de la page et guide pas à pas : voir `shopify/SHOPIFY.md` |

@@ -1,5 +1,7 @@
 # Mettre la page KLARSHIT sur Shopify
 
+Tous les chemins de ce guide partent du dossier `klarshit/` du repo Bolzo.ch.
+
 `index.html` est la démo. Pour la boutique, la page existe aussi en **section de
 thème Shopify**, déjà prête : `shopify/sections/klarshit-produit.liquid`.
 
@@ -133,7 +135,7 @@ Deux façons, **choisir l'une ou l'autre** :
   plus simple avec ChatGPT. Ne jamais relancer le convertisseur ensuite, sinon
   il écrase ces changements.
 - **Modifier `index.html`, puis régénérer la section** avec
-  `python3 shopify/outils/convertir.py`. Le script refait le `.liquid` à partir
+  `python3 klarshit/shopify/outils/convertir.py`. Le script refait le `.liquid` à partir
   de la démo, avec les lots branchés sur Shopify. Il s'arrête avec un message
   s'il ne reconnaît plus une partie de la page.
 
