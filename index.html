@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr-CH">
+<html lang="de-CH">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -29,7 +29,7 @@
 @font-face{font-family:"Overshoot";src:url(assets/fonts/Overshoot-GentleBreeze.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Malabard";src:url(assets/fonts/Malabard-ExtraBold.woff2) format("woff2");font-weight:800;font-style:normal;font-display:swap}
 
-:root:not(.de) [lang="de"], :root.de [lang="fr"]{display:none!important}
+:root:not(.fr) [lang="fr"], :root.fr [lang="de"]{display:none!important}
 
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -169,8 +169,8 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
       <a href="#faq">FAQ</a>
     </nav>
     <div class="lang" role="group" aria-label="Langue / Sprache">
-      <button type="button" id="lang-fr" data-set-lang="fr" aria-pressed="true">FR</button>
-      <button type="button" id="lang-de" data-set-lang="de" aria-pressed="false">DE</button>
+      <button type="button" id="lang-de" data-set-lang="de" aria-pressed="true">DE</button>
+      <button type="button" id="lang-fr" data-set-lang="fr" aria-pressed="false">FR</button>
     </div>
   </div>
 </header>
@@ -296,12 +296,12 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 (function(){
   var root = document.documentElement;
   var KEY = "bolzo-lang";
-  var lang = "fr";
+  var lang = "de";
   try { var saved = localStorage.getItem(KEY); if (saved === "de" || saved === "fr") lang = saved; } catch (e) {}
 
   function applyLang(l){
     lang = l;
-    root.classList.toggle("de", l === "de");
+    root.classList.toggle("fr", l === "fr");
     root.lang = l === "de" ? "de-CH" : "fr-CH";
     document.querySelectorAll("[data-set-lang]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");

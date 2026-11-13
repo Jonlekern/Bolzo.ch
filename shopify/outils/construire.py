@@ -74,7 +74,7 @@ must("bolzo.example" not in html, "adresse provisoire restante")
 js = re.search(r"<script>(.*?)</script>", src, re.S).group(1)
 js = js.replace('var root = document.documentElement;', 'var root = document.getElementById("bz");\n  if (!root) return;')
 js = re.sub(r'  var KEY = "bolzo-lang";\n', "", js)
-js = re.sub(r'  var lang = "fr";\n  try \{[^\n]*\n', '  var lang = root.classList.contains("de") ? "de" : "fr";\n', js)
+js = re.sub(r'  var lang = "(?:fr|de)";\n  try \{[^\n]*\n', '  var lang = root.classList.contains("fr") ? "fr" : "de";\n', js)
 js = re.sub(r'    root\.lang = [^\n]*\n', "", js)
 js = re.sub(r'    document\.querySelectorAll\("\[data-set-lang\]"\)\.forEach\(function\(b\)\{\n      b\.setAttribute\("aria-pressed"[^\n]*\n    \}\);\n', "", js)
 js = re.sub(r'  document\.querySelectorAll\("\[data-set-lang\]"\)\.forEach\(function\(b\)\{.*?\n  \}\);\n', "", js, flags=re.S)
@@ -103,7 +103,7 @@ home = f"""{{%- comment -%}}
 {css}
 </style>
 
-<div class="bz{{% if request.locale.iso_code == 'de' %}} de{{% endif %}}" id="bz">
+<div class="bz{{% if request.locale.iso_code == 'fr' %}} fr{{% endif %}}" id="bz">
 {html}
 </div>
 

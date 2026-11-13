@@ -25,7 +25,7 @@
 }
 @font-face{font-family:"Overshoot";src:url({{ 'Overshoot-GentleBreeze.woff2' | asset_url }}) format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Malabard";src:url({{ 'Malabard-ExtraBold.woff2' | asset_url }}) format("woff2");font-weight:800;font-style:normal;font-display:swap}
-.bz:not(.de) [lang="de"],.bz.de [lang="fr"]{display:none!important}
+.bz:not(.fr) [lang="fr"],.bz.fr [lang="de"]{display:none!important}
 .bz *,.bz *::before,.bz *::after{box-sizing:border-box}
 .bz{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .bz h1,.bz h2,.bz h3{font-family:var(--f-display);font-weight:400;font-synthesis:none;line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
@@ -130,7 +130,7 @@
 
 </style>
 
-<div class="bz{% if request.locale.iso_code == 'de' %} de{% endif %}" id="bz">
+<div class="bz{% if request.locale.iso_code == 'fr' %} fr{% endif %}" id="bz">
 
 
 <section class="hero" aria-labelledby="hero-title">
@@ -237,11 +237,11 @@
 (function(){
   var root = document.getElementById("bz");
   if (!root) return;
-  var lang = root.classList.contains("de") ? "de" : "fr";
+  var lang = root.classList.contains("fr") ? "fr" : "de";
 
   function applyLang(l){
     lang = l;
-    root.classList.toggle("de", l === "de");
+    root.classList.toggle("fr", l === "fr");
     document.querySelectorAll("img[data-alt-" + l + "]").forEach(function(img){
       img.alt = img.getAttribute("data-alt-" + l);
     });

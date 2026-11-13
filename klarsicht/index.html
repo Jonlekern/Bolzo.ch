@@ -25,7 +25,7 @@
 @font-face{font-family:"Malabard";src:url(fonts/Malabard-ExtraBold.woff2) format("woff2");font-weight:800;font-style:normal;font-display:swap}
 @font-face{font-family:"Isocircle";src:url(fonts/ISOCIRCLE-050.woff2) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 
-:root:not(.de) [lang="de"], :root.de [lang="fr"]{display:none!important}
+:root:not(.fr) [lang="fr"], :root.fr [lang="de"]{display:none!important}
 
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -253,8 +253,8 @@ button{font:inherit;color:inherit}
     </nav>
     <div class="tools">
       <div class="lang" role="group" aria-label="Langue / Sprache">
-        <button type="button" id="lang-fr" data-set-lang="fr" aria-pressed="true">FR</button>
-        <button type="button" id="lang-de" data-set-lang="de" aria-pressed="false">DE</button>
+        <button type="button" id="lang-de" data-set-lang="de" aria-pressed="true">DE</button>
+        <button type="button" id="lang-fr" data-set-lang="fr" aria-pressed="false">FR</button>
       </div>
       <a class="cart" id="cart-link" href="#acheter" aria-label="Panier">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
@@ -633,7 +633,7 @@ button{font:inherit;color:inherit}
   var root = document.documentElement;
   var KEY = "klarsicht-lang";
   var PRICES = { "2": "CHF 29.90", "4": "CHF 49.90", "6": "CHF 64.90" };
-  var lang = "fr";
+  var lang = "de";
   try { var saved = localStorage.getItem(KEY); if (saved === "de" || saved === "fr") lang = saved; } catch (e) {}
 
   var LABELS = {
@@ -654,7 +654,7 @@ button{font:inherit;color:inherit}
 
   function applyLang(l){
     lang = l;
-    root.classList.toggle("de", l === "de");
+    root.classList.toggle("fr", l === "fr");
     root.lang = l === "de" ? "de-CH" : "fr-CH";
     document.querySelectorAll("[data-set-lang]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");

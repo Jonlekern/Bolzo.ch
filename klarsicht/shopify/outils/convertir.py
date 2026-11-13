@@ -139,7 +139,7 @@ js = re.search(r"<script>(.*?)</script>", src, re.S).group(1)
 js = js.replace('var root = document.documentElement;', 'var root = document.getElementById("kls");\n  if (!root) return;')
 js = re.sub(r'  var KEY = "klarsicht-lang";\n', "", js)
 js = re.sub(r'  var PRICES = \{[^}]*\};\n', "", js)
-js = re.sub(r'  var lang = "fr";\n  try \{[^\n]*\n', '  var lang = root.classList.contains("de") ? "de" : "fr";\n', js)
+js = re.sub(r'  var lang = "(?:fr|de)";\n  try \{[^\n]*\n', '  var lang = root.classList.contains("fr") ? "fr" : "de";\n', js)
 js = re.sub(r'    root\.lang = [^\n]*\n', "", js)
 js = re.sub(r'    document\.querySelectorAll\("\[data-set-lang\]"\)\.forEach\(function\(b\)\{\n      b\.setAttribute\("aria-pressed"[^\n]*\n    \}\);\n', "", js)
 js = re.sub(r'    document\.getElementById\("cart-link"\)[^\n]*\n', "", js)
@@ -183,7 +183,7 @@ result = f"""{{%- comment -%}}
 {fonts_link}
 <style>{css}</style>
 
-<div class="kls{{% if request.locale.iso_code == 'de' %}} de{{% endif %}}" id="kls">
+<div class="kls{{% if request.locale.iso_code == 'fr' %}} fr{{% endif %}}" id="kls">
 {{%- if product.variants.size < 3 -%}}
   <p class="kls-warn">KLARSICHT : ce produit doit avoir 3 variantes (1 + 1, 4×, 6×). Voir shopify/SHOPIFY.md.</p>
 {{%- endif -%}}

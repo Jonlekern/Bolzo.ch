@@ -9,8 +9,8 @@ Ce qui change par rapport à la démo :
 - **Les lots sont branchés sur le vrai panier.** Les 3 lots sont les 3 variantes
   du produit, et les prix viennent de Shopify.
 - **Plus d'en-tête ni de pied de page** : ceux du thème Shopify s'affichent.
-- **Plus de bouton FR/DE** : la langue suit celle de la boutique (allemand si
-  le client navigue en allemand, sinon français).
+- **Plus de bouton FR/DE** : la langue suit celle de la boutique (français si
+  le client navigue en français, sinon allemand).
 - **Les avis d'exemple sont coupés par défaut.** Une case permet de les
   rallumer pour une démo.
 - **Les messages « maquette » ont disparu.**
@@ -112,7 +112,7 @@ cliquer sur la section « KLARSICHT produit ».
 ## 5. L'allemand
 
 Paramètres → Langues → ajouter **Allemand** et le publier. Un client qui
-navigue en allemand voit la page en allemand, les autres en français.
+navigue en français voit la page en français, les autres en allemand.
 
 ## 6. Vérifier avant de publier
 

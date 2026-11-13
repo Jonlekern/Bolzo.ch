@@ -27,7 +27,7 @@
 @font-face{font-family:"Malabard";src:url({{ 'Malabard-ExtraBold.woff2' | asset_url }}) format("woff2");font-weight:800;font-style:normal;font-display:swap}
 @font-face{font-family:"Isocircle";src:url({{ 'ISOCIRCLE-050.woff2' | asset_url }}) format("woff2");font-weight:500;font-style:normal;font-display:swap}
 
-.kls:not(.de) [lang="de"],.kls.de [lang="fr"]{display:none!important}
+.kls:not(.fr) [lang="fr"],.kls.fr [lang="de"]{display:none!important}
 
 .kls *,.kls *::before,.kls *::after{box-sizing:border-box}
 .kls{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -240,7 +240,7 @@
 .kls .kls-warn{background:#fff3cd;color:#121519;padding:12px 16px;border-radius:10px;margin:16px}
 </style>
 
-<div class="kls{% if request.locale.iso_code == 'de' %} de{% endif %}" id="kls">
+<div class="kls{% if request.locale.iso_code == 'fr' %} fr{% endif %}" id="kls">
 {%- if product.variants.size < 3 -%}
   <p class="kls-warn">KLARSICHT : ce produit doit avoir 3 variantes (1 + 1, 4×, 6×). Voir shopify/SHOPIFY.md.</p>
 {%- endif -%}
@@ -595,7 +595,7 @@
 (function(){
   var root = document.getElementById("kls");
   if (!root) return;
-  var lang = root.classList.contains("de") ? "de" : "fr";
+  var lang = root.classList.contains("fr") ? "fr" : "de";
 
   var LABELS = {
     fr: { cart: "Panier", nav: "Navigation", thumbs: "Photos du produit", photo: "Voir la photo " },
@@ -615,7 +615,7 @@
 
   function applyLang(l){
     lang = l;
-    root.classList.toggle("de", l === "de");
+    root.classList.toggle("fr", l === "fr");
     document.querySelectorAll("img[data-alt-" + l + "]").forEach(function(img){
       img.alt = img.getAttribute("data-alt-" + l);
     });
