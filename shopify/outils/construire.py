@@ -130,6 +130,6 @@ needed = sorted(set(re.findall(r"'([^']+\.(?:jpg|png))' \| file_url", klar + hom
 for n in needed:
     shutil.copy(ROOT / "klarsicht/img" / n, OUT / "fichiers/")
 shutil.copy(ROOT / "klarsicht/video/demo.mp4", OUT / "fichiers/")
-for n in ["logo-bolzo-rouge.png", "logo-bolzo-blanc.png"]:
+for n in ["logo-bolzo-rouge.png", "logo-bolzo-blanc.png", "favicon-180.png"]:
     shutil.copy(ROOT / "marque" / n, OUT / "fichiers/")
 print("Construit : shopify/ —", len(needed), "images, 1 vidéo, 2 logos, 3 polices, 2 sections, 2 modèles")

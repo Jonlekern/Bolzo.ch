@@ -5,7 +5,8 @@ Ce dossier contient les deux pages prêtes pour un thème Shopify :
 - **la page produit KLARSICHT** (`sections/klarsicht-produit.liquid`)
 
 L'en-tête, le bandeau et le pied de page sont ceux du thème : mets-y le logo
-Bolzo.ch (`fichiers/logo-bolzo-rouge.png`).
+Bolzo.ch (`fichiers/logo-bolzo-rouge.png`) et le favicon
+(`fichiers/favicon-180.png`, dans Personnaliser → Paramètres du thème → Logo).
 
 ## Contenu du dossier
 

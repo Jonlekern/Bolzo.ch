@@ -19,6 +19,8 @@ Fichiers dans [`marque/`](marque/), en SVG et en PNG transparent (2400 px) :
 | KLARSICHT | `logo-klarsicht-rouge.svg` / `.png` | `logo-klarsicht-blanc.svg` / `.png` |
 | KLARSICHT TM | `logo-klarsicht-tm-rouge.svg` / `.png` | `logo-klarsicht-tm-blanc.svg` / `.png` |
 
+**Favicon** : <img src="marque/favicon-180.png" alt="Favicon Bolzo" width="48"> B blanc et point rouge sur carré noir. Fichiers `marque/favicon.svg`, `favicon-32.png`, `favicon-180.png`, `favicon-512.png` et `favicon.ico` à la racine.
+
 - Textes convertis en tracés : pas besoin d'installer les polices.
 - Ne pas déformer, pas d'ombre, de contour ni de dégradé.
 - Espace vide autour : au moins la hauteur d'une minuscule.
