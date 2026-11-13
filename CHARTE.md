@@ -9,7 +9,7 @@ https://jonlekern.github.io/Bolzo.ch/charte.html
 |---|---|---|
 | **Bolzo.ch**<br>Overshoot Gentle Breeze 400 | <img src="marque/apercu/bolzo-rouge-sur-clair.png" alt="Bolzo.ch rouge sur fond clair" width="300"> | <img src="marque/apercu/bolzo-blanc-sur-noir.png" alt="Bolzo.ch blanc sur fond noir" width="300"> |
 | **KLARSICHT**<br>Malabard ExtraBold 800 | <img src="marque/apercu/klarsicht-rouge-sur-clair.png" alt="KLARSICHT rouge sur fond clair" width="300"> | <img src="marque/apercu/klarsicht-blanc-sur-noir.png" alt="KLARSICHT blanc sur fond noir" width="300"> |
-| **KLARSICHT.ch**<br>Malabard ExtraBold 800 | <img src="marque/apercu/klarsicht-ch-rouge-sur-clair.png" alt="KLARSICHT.ch rouge sur fond clair" width="300"> | <img src="marque/apercu/klarsicht-ch-blanc-sur-noir.png" alt="KLARSICHT.ch blanc sur fond noir" width="300"> |
+| **KLARSICHT TM**<br>Pour les grands logos (pied de page, emballage) | <img src="marque/apercu/klarsicht-tm-rouge-sur-clair.png" alt="KLARSICHT TM rouge sur fond clair" width="300"> | <img src="marque/apercu/klarsicht-tm-blanc-sur-noir.png" alt="KLARSICHT TM blanc sur fond noir" width="300"> |
 
 Fichiers dans [`marque/`](marque/), en SVG et en PNG transparent (2400 px) :
 
@@ -17,7 +17,7 @@ Fichiers dans [`marque/`](marque/), en SVG et en PNG transparent (2400 px) :
 |---|---|---|
 | Bolzo.ch | `logo-bolzo-rouge.svg` / `.png` | `logo-bolzo-blanc.svg` / `.png` |
 | KLARSICHT | `logo-klarsicht-rouge.svg` / `.png` | `logo-klarsicht-blanc.svg` / `.png` |
-| KLARSICHT.ch | `logo-klarsicht-ch-rouge.svg` / `.png` | `logo-klarsicht-ch-blanc.svg` / `.png` |
+| KLARSICHT TM | `logo-klarsicht-tm-rouge.svg` / `.png` | `logo-klarsicht-tm-blanc.svg` / `.png` |
 
 - Textes convertis en tracés : pas besoin d'installer les polices.
 - Ne pas déformer, pas d'ombre, de contour ni de dégradé.
