@@ -1,9 +1,9 @@
-# Mettre la page KLARSHIT sur Shopify
+# Mettre la page KLARSICHT sur Shopify
 
-Tous les chemins de ce guide partent du dossier `klarshit/` du repo Bolzo.ch.
+Tous les chemins de ce guide partent du dossier `klarsicht/` du repo Bolzo.ch.
 
 `index.html` est la démo. Pour la boutique, la page existe aussi en **section de
-thème Shopify**, déjà prête : `shopify/sections/klarshit-produit.liquid`.
+thème Shopify**, déjà prête : `shopify/sections/klarsicht-produit.liquid`.
 
 Ce qui change par rapport à la démo :
 - **Les lots sont branchés sur le vrai panier.** Les 3 lots sont les 3 variantes
@@ -20,10 +20,10 @@ Compte environ une heure la première fois.
 ## À coller dans ChatGPT
 
 Colle ce message, puis ce fichier `SHOPIFY.md`, puis le contenu de
-`shopify/sections/klarshit-produit.liquid` :
+`shopify/sections/klarsicht-produit.liquid` :
 
 > Je dois mettre une page produit sur ma boutique Shopify. Voici le guide
-> SHOPIFY.md et la section klarshit-produit.liquid. Guide-moi étape par étape,
+> SHOPIFY.md et la section klarsicht-produit.liquid. Guide-moi étape par étape,
 > une étape à la fois, et attends que je te dise « fait » avant de passer à la
 > suivante. Si tu modifies le .liquid, ne touche pas au bloc {% form %}, aux
 > product.variants, aux file_url / asset_url ni au {% schema %}, garde chaque
@@ -35,7 +35,7 @@ Colle ce message, puis ce fichier `SHOPIFY.md`, puis le contenu de
 
 Produits → Ajouter un produit.
 
-- **Titre** : KLARSHIT
+- **Titre** : KLARSICHT
 - **Option** : nom `Offre`, avec ces 3 valeurs **dans cet ordre** :
 
 | Ordre | Valeur | Prix | Prix avant réduction |
@@ -88,20 +88,20 @@ Barlow n'a pas besoin d'être téléversée : elle vient de Google Fonts.
 
 Toujours dans Modifier le code :
 
-1. **Dossier `sections`** → Ajouter une section → nom `klarshit-produit` →
+1. **Dossier `sections`** → Ajouter une section → nom `klarsicht-produit` →
    remplacer tout le contenu par celui de
-   `shopify/sections/klarshit-produit.liquid` → Enregistrer.
+   `shopify/sections/klarsicht-produit.liquid` → Enregistrer.
 2. **Dossier `templates`** → Ajouter un modèle → type `product`, format JSON,
-   nom `klarshit` → remplacer le contenu par celui de
-   `shopify/templates/product.klarshit.json` → Enregistrer.
+   nom `klarsicht` → remplacer le contenu par celui de
+   `shopify/templates/product.klarsicht.json` → Enregistrer.
 
-Ensuite, dans la fiche du produit KLARSHIT (Produits → KLARSHIT), à droite :
-**Modèle de thème** → choisir `klarshit` → Enregistrer.
+Ensuite, dans la fiche du produit KLARSICHT (Produits → KLARSICHT), à droite :
+**Modèle de thème** → choisir `klarsicht` → Enregistrer.
 
 ## 4. Régler la section
 
-Boutique en ligne → Thèmes → Personnaliser → ouvrir le produit KLARSHIT →
-cliquer sur la section « KLARSHIT produit ».
+Boutique en ligne → Thèmes → Personnaliser → ouvrir le produit KLARSICHT →
+cliquer sur la section « KLARSICHT produit ».
 
 | Réglage | Quoi mettre |
 |---|---|
@@ -135,7 +135,7 @@ Deux façons, **choisir l'une ou l'autre** :
   plus simple avec ChatGPT. Ne jamais relancer le convertisseur ensuite, sinon
   il écrase ces changements.
 - **Modifier `index.html`, puis régénérer la section** avec
-  `python3 klarshit/shopify/outils/convertir.py`. Le script refait le `.liquid` à partir
+  `python3 klarsicht/shopify/outils/convertir.py`. Le script refait le `.liquid` à partir
   de la démo, avec les lots branchés sur Shopify. Il s'arrête avec un message
   s'il ne reconnaît plus une partie de la page.
 

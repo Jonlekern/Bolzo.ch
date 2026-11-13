@@ -12,7 +12,7 @@ la police.
 | `logo-bolzo-blanc.png` | Même version en image, 2400 px de large, fond transparent. |
 
 Le rouge est le même que l'accent des pages produit (`--red` dans la charte de
-KLARSHIT).
+KLARSICHT).
 
 ## Règles
 - Ne pas déformer le logo : garder ses proportions.

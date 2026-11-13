@@ -9,17 +9,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
 :root{
-  /* colors: same palette as the KLARSHIT page, so home and product feel like one shop */
+  /* colors: same palette as the KLARSICHT page, so home and product feel like one shop */
   --bg:#f2f4f5;      /* page ground */
   --paper:#ffffff;   /* cards, header */
   --fg:#121519;      /* ink, dark bands */
   --muted:#59616b;   /* secondary text */
   --line:#d6dade;    /* hairlines */
   --red:#d3121b;     /* Bolzo red, logo and accents */
-  /* fonts: titles = Overshoot Gentle Breeze 400 (as the logo), body = Barlow, KLARSHIT name = Malabard 800 */
+  /* fonts: titles = Overshoot Gentle Breeze 400 (as the logo), body = Barlow, KLARSICHT name = Malabard 800 */
   --f-display:"Overshoot","Helvetica Neue",Arial,sans-serif;
   --f-body:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --f-klarshit:"Malabard","Arial Black",Arial,sans-serif;
+  --f-klarsicht:"Malabard","Arial Black",Arial,sans-serif;
   /* layout: 1180px wrapper, wide hero with photo, product grid 3 columns, one column on phones */
   --max:1180px;
   --gutter-l:max(16px, env(safe-area-inset-left, 0px));
@@ -76,7 +76,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 .hero-figure{margin:0;min-width:0;position:relative}
 .hero-figure img{width:100%;border-radius:var(--radius);background:var(--paper)}
 .hero-figure figcaption{position:absolute;left:14px;bottom:14px;background:var(--paper);border-radius:999px;padding:6px 14px;font-size:.9rem;font-weight:600;display:flex;gap:8px;align-items:center}
-.hero-figure figcaption b{font-family:var(--f-klarshit);font-weight:800;letter-spacing:.02em;color:var(--red)}
+.hero-figure figcaption b{font-family:var(--f-klarsicht);font-weight:800;letter-spacing:.02em;color:var(--red)}
 
 /* products */
 .products{background:var(--paper);border-block:1px solid var(--line)}
@@ -89,7 +89,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 .card img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;background:var(--paper)}
 .card-body{padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
 .tag{justify-self:start;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
-.card-name{font-family:var(--f-klarshit);font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:.02em;color:var(--red)}
+.card-name{font-family:var(--f-klarsicht);font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:.02em;color:var(--red)}
 .card-body p{color:var(--muted)}
 .card-price{font-size:1.05rem;color:var(--fg)}
 .card-price strong{font-weight:600}
@@ -187,8 +187,8 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
       <a class="btn" href="#produits"><span lang="fr">Voir les produits</span><span lang="de">Produkte ansehen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
     </div>
     <figure class="hero-figure">
-      <img src="assets/img/klarshit-face.jpg" width="720" height="720" alt="La brosse KLARSHIT rouge, de face et de côté." data-alt-fr="La brosse KLARSHIT rouge, de face et de côté." data-alt-de="Die rote KLARSHIT-Bürste, von vorne und von der Seite.">
-      <figcaption><span lang="fr">Premier produit :</span><span lang="de">Erstes Produkt:</span> <b>KLARSHIT</b></figcaption>
+      <img src="assets/img/klarsicht-face.jpg" width="720" height="720" alt="La brosse KLARSICHT rouge, de face et de côté." data-alt-fr="La brosse KLARSICHT rouge, de face et de côté." data-alt-de="Die rote KLARSICHT-Bürste, von vorne und von der Seite.">
+      <figcaption><span lang="fr">Premier produit :</span><span lang="de">Erstes Produkt:</span> <b>KLARSICHT</b></figcaption>
     </figure>
   </div>
 </section>
@@ -202,11 +202,11 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
       </div>
     </div>
     <div class="grid">
-      <a class="card" href="klarshit/">
-        <img src="assets/img/klarshit.jpg" width="720" height="720" alt="" loading="lazy">
+      <a class="card" href="klarsicht/">
+        <img src="assets/img/klarsicht.jpg" width="720" height="720" alt="" loading="lazy">
         <div class="card-body">
           <span class="tag"><span lang="fr">Auto</span><span lang="de">Auto</span></span>
-          <span class="card-name">KLARSHIT</span>
+          <span class="card-name">KLARSICHT</span>
           <p lang="fr">La brosse qui retire le film gras et les traces d'eau du pare-brise et des rétroviseurs. Tu vois plus clair sous la pluie et de nuit.</p>
           <p lang="de">Die Bürste, die Fettfilm und Wasserflecken von Windschutzscheibe und Spiegeln entfernt. Du siehst klarer bei Regen und in der Nacht.</p>
           <p class="card-price"><span lang="fr">Dès</span><span lang="de">Ab</span> <strong>CHF 29.90</strong> <span lang="fr">les 2 brosses</span><span lang="de">für 2 Bürsten</span></p>
@@ -261,7 +261,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
     </div>
     <div class="list">
       <details><summary><span lang="fr">C'est quoi, Bolzo ?</span><span lang="de">Was ist Bolzo?</span></summary>
-        <div class="a"><p lang="fr">Une boutique suisse en ligne de produits de niche pour les passionnés. On commence par l'auto, avec KLARSHIT.</p><p lang="de">Ein Schweizer Onlineshop für Nischenprodukte für Leidenschaftliche. Wir starten mit dem Auto, mit KLARSHIT.</p></div></details>
+        <div class="a"><p lang="fr">Une boutique suisse en ligne de produits de niche pour les passionnés. On commence par l'auto, avec KLARSICHT.</p><p lang="de">Ein Schweizer Onlineshop für Nischenprodukte für Leidenschaftliche. Wir starten mit dem Auto, mit KLARSICHT.</p></div></details>
       <details><summary><span lang="fr">Combien coûte la livraison ?</span><span lang="de">Was kostet der Versand?</span></summary>
         <div class="a"><p lang="fr">Rien : elle est gratuite partout en Suisse. Compte 2 à 4 jours ouvrables.</p><p lang="de">Nichts: Der Versand ist in der ganzen Schweiz gratis. Rechne mit 2–4 Werktagen.</p></div></details>
       <details><summary><span lang="fr">Comment je peux payer ?</span><span lang="de">Wie kann ich bezahlen?</span></summary>

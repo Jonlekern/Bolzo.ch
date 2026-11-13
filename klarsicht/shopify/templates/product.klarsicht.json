@@ -1,7 +1,7 @@
 {
   "sections": {
-    "klarshit": {
-      "type": "klarshit-produit",
+    "klarsicht": {
+      "type": "klarsicht-produit",
       "settings": {
         "contact_email": "",
         "video_url": "",
@@ -9,5 +9,5 @@
       }
     }
   },
-  "order": ["klarshit"]
+  "order": ["klarsicht"]
 }

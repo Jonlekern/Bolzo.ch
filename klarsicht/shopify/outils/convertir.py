@@ -1,13 +1,13 @@
 """Convertit index.html (la démo) en section de thème Shopify.
 
 Usage : python3 shopify/outils/convertir.py
-Écrit shopify/sections/klarshit-produit.liquid à partir de index.html.
+Écrit shopify/sections/klarsicht-produit.liquid à partir de index.html.
 """
 import re, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 src = (ROOT / "index.html").read_text(encoding="utf-8")
-out = ROOT / "shopify" / "sections" / "klarshit-produit.liquid"
+out = ROOT / "shopify" / "sections" / "klarsicht-produit.liquid"
 
 def must(cond, msg):
     if not cond:
@@ -82,7 +82,7 @@ html = re.sub(r'(<section class="benefit flip demo".*?</section>)',
               r"{% if section.settings.video_url != blank %}\n\1\n{% endif %}", html, flags=re.S)
 
 # Adresse de contact
-html = html.replace("hello@klarshit.example", "{{ section.settings.contact_email | default: shop.email }}")
+html = html.replace("hello@klarsicht.example", "{{ section.settings.contact_email | default: shop.email }}")
 
 # Avis d'exemple : désactivés par défaut
 must('<section class="reviews"' in html, "bloc des avis introuvable")
@@ -137,7 +137,7 @@ must("img/" not in re.sub(r"\{\{.*?\}\}", "", html), "il reste un lien d'image l
 # ---------- JavaScript ----------
 js = re.search(r"<script>(.*?)</script>", src, re.S).group(1)
 js = js.replace('var root = document.documentElement;', 'var root = document.getElementById("kls");\n  if (!root) return;')
-js = re.sub(r'  var KEY = "klarshit-lang";\n', "", js)
+js = re.sub(r'  var KEY = "klarsicht-lang";\n', "", js)
 js = re.sub(r'  var PRICES = \{[^}]*\};\n', "", js)
 js = re.sub(r'  var lang = "fr";\n  try \{[^\n]*\n', '  var lang = root.classList.contains("de") ? "de" : "fr";\n', js)
 js = re.sub(r'    root\.lang = [^\n]*\n', "", js)
@@ -160,7 +160,7 @@ html = re.sub(r'<span class="js-price">[^<]*</span>', '<span class="js-price">{{
 
 schema = """{% schema %}
 {
-  "name": "KLARSHIT produit",
+  "name": "KLARSICHT produit",
   "tag": "section",
   "class": "kls-section",
   "enabled_on": { "templates": ["product"] },
@@ -169,14 +169,14 @@ schema = """{% schema %}
     { "type": "text", "id": "video_url", "label": "Lien de la vidéo (fichier MP4)", "info": "Téléverse demo.mp4 dans Contenu > Fichiers, puis colle son lien ici. Vide = pas de bloc vidéo." },
     { "type": "checkbox", "id": "show_example_reviews", "label": "Afficher les avis d'exemple", "default": false, "info": "Pour une démo uniquement. À désactiver sur une vraie boutique : ce ne sont pas de vrais avis." }
   ],
-  "presets": [{ "name": "KLARSHIT produit" }]
+  "presets": [{ "name": "KLARSICHT produit" }]
 }
 {% endschema %}"""
 
 fonts_link = re.search(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>', src).group(0)
 
 result = f"""{{%- comment -%}}
-  Section KLARSHIT, générée depuis index.html par shopify/outils/convertir.py.
+  Section KLARSICHT, générée depuis index.html par shopify/outils/convertir.py.
   Les 3 lots = les 3 premières variantes du produit, dans cet ordre : 1 + 1, 4×, 6×.
   Voir shopify/SHOPIFY.md.
 {{%- endcomment -%}}
@@ -185,7 +185,7 @@ result = f"""{{%- comment -%}}
 
 <div class="kls{{% if request.locale.iso_code == 'de' %}} de{{% endif %}}" id="kls">
 {{%- if product.variants.size < 3 -%}}
-  <p class="kls-warn">KLARSHIT : ce produit doit avoir 3 variantes (1 + 1, 4×, 6×). Voir shopify/SHOPIFY.md.</p>
+  <p class="kls-warn">KLARSICHT : ce produit doit avoir 3 variantes (1 + 1, 4×, 6×). Voir shopify/SHOPIFY.md.</p>
 {{%- endif -%}}
 {html}
 </div>

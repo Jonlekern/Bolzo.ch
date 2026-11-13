@@ -1,4 +1,4 @@
-# KLARSHIT : page produit de démonstration
+# KLARSICHT : page produit de démonstration
 
 Page de vente d'exemple pour un client : une brosse qui retire le film gras des
 pare-brise et des rétroviseurs. Elle vise la Suisse, en français et en allemand,
@@ -10,17 +10,17 @@ affichent seulement un message.
 **Pour Shopify**, suivre [`shopify/SHOPIFY.md`](shopify/SHOPIFY.md) : la page y
 existe déjà en section de thème, avec les lots branchés sur le panier.
 
-Page en ligne : https://jonlekern.github.io/Bolzo.ch/klarshit/
+Page en ligne : https://jonlekern.github.io/Bolzo.ch/klarsicht/
 
 Ce dossier fait partie du repo de la boutique **Bolzo.ch**. Tous les chemins
-de ce README partent du dossier `klarshit/`.
+de ce README partent du dossier `klarsicht/`.
 
 ---
 
 ## À coller dans ChatGPT avant de lui demander une modification
 
-> Tu travailles sur `klarshit/index.html` du repo `Bolzo.ch`. Lis d'abord
-> `klarshit/README.md` et respecte sa charte graphique et toutes ses règles.
+> Tu travailles sur `klarsicht/index.html` du repo `Bolzo.ch`. Lis d'abord
+> `klarsicht/README.md` et respecte sa charte graphique et toutes ses règles.
 > Ne change que ce que je te demande.
 > Rends-moi le fichier complet, sans rien couper, et dis-moi en une liste ce que
 > tu as modifié.
@@ -49,7 +49,7 @@ Trois polices, chacune avec un seul rôle.
 
 | Rôle | Police | Graisse | Taille | Détails |
 |---|---|---|---|---|
-| Logo KLARSHIT | **Malabard** | 800 | en-tête 1.7rem · titre produit 3 à 5.4rem · pied de page 3 à 7rem | Toujours en CAPITALES, espacement 0.02em. Rouge dans le titre produit, noir dans l'en-tête, blanc dans le pied de page. Jamais pour autre chose que le mot KLARSHIT. |
+| Logo KLARSICHT | **Malabard** | 800 | en-tête 1.7rem · titre produit 3 à 5.4rem · pied de page 3 à 7rem | Toujours en CAPITALES, espacement 0.02em. Rouge dans le titre produit, noir dans l'en-tête, blanc dans le pied de page. Jamais pour autre chose que le mot KLARSICHT. |
 | Titres de section (h2) | **Isocircle** | 500 | 2.2 à 3.8rem selon l'écran | Interligne 1.1. Un mot peut passer en rouge avec `<em>`, un seul par titre. |
 | Sous-titre produit | **Isocircle** | 500 | 1.35 à 1.8rem | Sous le logo dans le bloc d'achat. |
 | Petits titres (h3) | **Isocircle** | 500 | 1.4rem | Étapes du mode d'emploi. |
@@ -168,7 +168,7 @@ prix différents :
 ### 7. Honnêteté, à ne jamais enlever
 - **Les avis sont des exemples.** Ils gardent leur étiquette « Exemple » et le
   bandeau « Avis d'exemple pour la démonstration » tant qu'ils ne viennent pas
-  de vrais clients de KLARSHIT. On n'ajoute pas d'avis présentés comme vrais.
+  de vrais clients de KLARSICHT. On n'ajoute pas d'avis présentés comme vrais.
 - **Pas de fausses promesses** : pas de « importé d'Allemagne », pas de
   « −40 °C », pas de durée d'efficacité, pas de garantie ou de délai de retour,
   pas de composition du liquide, pas de contenance en ml.
@@ -235,7 +235,7 @@ fusionnée, elle se met à jour en une à deux minutes.
 
 Ces éléments sont des exemples à remplacer avant une vraie boutique :
 - le délai de livraison (« 2 à 4 jours ouvrables ») ;
-- l'adresse de contact `hello@klarshit.example` ;
+- l'adresse de contact `hello@klarsicht.example` ;
 - les 6 avis et leurs photos ;
 - les photos et la vidéo, qui viennent du fournisseur ;
 - les mentions légales du pied de page (Impressum, CGV, Datenschutz), qui ne

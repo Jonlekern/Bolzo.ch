@@ -8,12 +8,12 @@ Boutique en ligne suisse, en français et en allemand, prix en CHF.
 
 | Produit | Dossier | Statut |
 |---|---|---|
-| **KLARSHIT** : brosse anti-film gras pour vitres de voiture | [`klarshit/`](klarshit/) | Page de démonstration prête, version Shopify prête |
+| **KLARSICHT** : brosse anti-film gras pour vitres de voiture | [`klarsicht/`](klarsicht/) | Page de démonstration prête, version Shopify prête |
 
 ## En ligne
 
 https://jonlekern.github.io/Bolzo.ch/ : la page d'accueil de la boutique.
-La page KLARSHIT est sur https://jonlekern.github.io/Bolzo.ch/klarshit/
+La page KLARSICHT est sur https://jonlekern.github.io/Bolzo.ch/klarsicht/
 
 ## Marque
 
@@ -25,9 +25,9 @@ en rouge `#d3121b`.
 - **Un dossier par produit.** Chaque produit a sa page (`index.html`), ses images,
   ses polices et sa version Shopify (`shopify/`).
 - **Les règles et la charte graphique de chaque produit** sont dans le README de
-  son dossier. Pour KLARSHIT : [`klarshit/README.md`](klarshit/README.md).
+  son dossier. Pour KLARSICHT : [`klarsicht/README.md`](klarsicht/README.md).
 - **Mettre une page sur Shopify** : suivre le guide du produit, par exemple
-  [`klarshit/shopify/SHOPIFY.md`](klarshit/shopify/SHOPIFY.md).
+  [`klarsicht/shopify/SHOPIFY.md`](klarsicht/shopify/SHOPIFY.md).
 
 ## Fichiers à la racine
 
