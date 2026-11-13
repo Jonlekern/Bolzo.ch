@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fr-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charte Bolzo.ch</title>
+<link rel="icon" href="marque/logo-bolzo-rouge.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f2f4f5;--paper:#ffffff;--fg:#121519;--muted:#59616b;--line:#d6dade;--red:#d3121b;
+  --f-display:"Overshoot","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --radius:10px;
+}
+@font-face{font-family:"Overshoot";src:url(assets/fonts/Overshoot-GentleBreeze.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Malabard";src:url(assets/fonts/Malabard-ExtraBold.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:"Isocircle";src:url(klarsicht/fonts/ISOCIRCLE-050.woff2) format("woff2");font-weight:500;font-display:swap}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;font-synthesis:none;line-height:1.05;margin:0;letter-spacing:-.01em}
+p{margin:0}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{padding-block:40px;display:grid;gap:14px}
+header img{width:min(360px,100%)}
+header h1{font-size:clamp(2rem,5vw,3.4rem)}
+section .wrap{padding-block:48px;display:grid;gap:24px;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,3.5vw,2.6rem)}
+.note{color:var(--muted);max-width:40em}
+
+.logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.logo-box{border-radius:var(--radius);padding:40px 32px;display:grid;place-items:center;border:1px solid var(--line);background:var(--paper)}
+.logo-box.dark{background:var(--fg);border-color:var(--fg)}
+.logo-box img{width:min(320px,100%)}
+
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sw{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-width:0}
+.sw i{display:block;height:88px}
+.sw div{padding:12px 14px;display:grid;gap:2px}
+.sw b{font-weight:600}
+.sw code{font-size:.9rem;color:var(--muted)}
+.sw span{font-size:.85rem;color:var(--muted)}
+
+.fonts{display:grid;gap:16px}
+.font{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:center}
+.font .sample{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;overflow-wrap:anywhere}
+.font dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;font-size:.95rem}
+.font dt{color:var(--muted)}
+.font dd{margin:0}
+
+.scale{display:grid;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;align-items:baseline;padding:18px 24px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row small{color:var(--muted);font-size:.85rem}
+.t-h1{font-family:var(--f-display);font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.05}
+.t-h1 em{font-style:normal;color:var(--red)}
+.t-h2{font-family:var(--f-display);font-size:clamp(2rem,4vw,3rem);line-height:1.05}
+.t-h3{font-family:var(--f-display);font-size:1.5rem;line-height:1.1}
+.t-lede{font-size:1.15rem;color:var(--muted)}
+
+.ui{display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:var(--radius);background:var(--red);color:var(--paper);font:600 1.05rem var(--f-body);padding:15px 22px}
+.btn.hover{background:#b30f17}
+.btn2{display:inline-flex;align-items:center;border:1.5px solid var(--fg);border-radius:var(--radius);background:var(--paper);font:600 1rem var(--f-body);padding:12px 18px}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;border-bottom:2px solid var(--red);padding-bottom:2px}
+.link svg,.btn svg{width:18px;height:18px}
+.tag{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.badge{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:var(--paper);border-radius:999px;padding:3px 9px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px}
+.lang span{padding:4px 10px;border-radius:999px;font-size:.85rem;font-weight:600;color:var(--muted)}
+.lang span:first-child{background:var(--fg);color:var(--paper)}
+
+.icons{display:flex;flex-wrap:wrap;gap:24px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.icons svg{width:32px;height:32px;color:var(--red)}
+
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.rule{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;display:grid;gap:10px;align-content:start}
+.rule h3{font-size:1.3rem;display:flex;gap:10px;align-items:center}
+.rule h3 svg{width:22px;height:22px;flex:none}
+.rule.yes h3 svg{color:#1d7a3e}
+.rule.no h3 svg{color:var(--red)}
+.rule ul{margin:0;padding-left:1.1em;color:var(--muted);display:grid;gap:4px}
+
+footer .wrap{padding-block:32px;color:var(--muted);font-size:.9rem}
+
+@media (max-width:860px){
+  .swatches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .font{grid-template-columns:minmax(0,1fr)}
+  .rules,.logos{grid-template-columns:minmax(0,1fr)}
+  .row{grid-template-columns:minmax(0,1fr);gap:6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="marque/logo-bolzo-rouge.svg" alt="Bolzo.ch" width="360" height="63">
+    <p class="eyebrow">Charte graphique</p>
+    <h1>Tout ce qu'il faut pour rester dans le style.</h1>
+    <p class="note">Couleurs, polices, tailles, boutons, icônes et ton. Version texte : CHARTE.md dans le repo.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">01 · Logo</p>
+    <h2>Logo</h2>
+    <div class="logos">
+      <div class="logo-box"><img src="marque/logo-bolzo-rouge.svg" alt="Logo Bolzo.ch rouge sur fond clair"></div>
+      <div class="logo-box dark"><img src="marque/logo-bolzo-blanc.svg" alt="Logo Bolzo.ch blanc sur fond noir"></div>
+    </div>
+    <p class="note">Overshoot Gentle Breeze 400, converti en tracés. Rouge sur fond clair, blanc sur fond noir ou photo. Ne pas déformer, pas d'ombre ni de contour. Espace vide autour : au moins la hauteur du « o ».</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">02 · Couleurs</p>
+    <h2>Couleurs</h2>
+    <div class="swatches">
+      <div class="sw"><i style="background:#d3121b"></i><div><b>Rouge Bolzo</b><code>#d3121b</code><span>Logo, achat, accent</span></div></div>
+      <div class="sw"><i style="background:#b30f17"></i><div><b>Rouge foncé</b><code>#b30f17</code><span>Survol des boutons</span></div></div>
+      <div class="sw"><i style="background:#121519"></i><div><b>Encre</b><code>#121519</code><span>Texte, fonds noirs</span></div></div>
+      <div class="sw"><i style="background:#59616b"></i><div><b>Gris texte</b><code>#59616b</code><span>Texte secondaire</span></div></div>
+      <div class="sw"><i style="background:#aab1ba"></i><div><b>Gris sur noir</b><code>#aab1ba</code><span>Secondaire sur fond noir</span></div></div>
+      <div class="sw"><i style="background:#d6dade"></i><div><b>Filet</b><code>#d6dade</code><span>Bordures, lignes</span></div></div>
+      <div class="sw"><i style="background:#f2f4f5"></i><div><b>Fond</b><code>#f2f4f5</code><span>Fond des pages</span></div></div>
+      <div class="sw"><i style="background:#ffffff;border-bottom:1px solid #d6dade"></i><div><b>Blanc</b><code>#ffffff</code><span>Cartes, en-tête</span></div></div>
+    </div>
+    <p class="note">Une seule couleur vive : le rouge. Pas de dégradés.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">03 · Polices</p>
+    <h2>Polices</h2>
+    <div class="fonts">
+      <div class="font">
+        <p class="sample" style="font-family:'Overshoot',sans-serif">Bolzo passion</p>
+        <dl><dt>Police</dt><dd>Overshoot Gentle Breeze</dd><dt>Graisse</dt><dd>400 uniquement</dd><dt>Rôle</dt><dd>Logo Bolzo.ch et titres du site</dd></dl>
+      </div>
+      <div class="font">
+        <p class="sample" style="font-family:'Barlow',sans-serif;font-weight:500">Texte, boutons</p>
+        <dl><dt>Police</dt><dd>Barlow (Google Fonts)</dd><dt>Graisses</dt><dd>400, 500, 600</dd><dt>Rôle</dt><dd>Tout le texte courant, menus, boutons, étiquettes</dd></dl>
+      </div>
+      <div class="font">
+        <p class="sample" style="font-family:'Malabard',sans-serif;font-weight:800;color:var(--red)">KLARSICHT</p>
+        <dl><dt>Police</dt><dd>Malabard ExtraBold</dd><dt>Graisse</dt><dd>800 uniquement</dd><dt>Rôle</dt><dd>Seulement le nom KLARSICHT, en capitales</dd></dl>
+      </div>
+      <div class="font">
+        <p class="sample" style="font-family:'Isocircle',sans-serif;font-weight:500">Trois gestes</p>
+        <dl><dt>Police</dt><dd>Isocircle 050</dd><dt>Graisse</dt><dd>500 uniquement</dd><dt>Rôle</dt><dd>Seulement les titres de la page KLARSICHT</dd></dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">04 · Tailles</p>
+    <h2>Échelle des textes</h2>
+    <div class="scale">
+      <div class="row"><small>Grand titre · Overshoot 400 · 2.4 à 4.4rem</small><p class="t-h1">Ta <em>passion</em>.</p></div>
+      <div class="row"><small>Titre de section · Overshoot 400 · 2 à 3rem</small><p class="t-h2">Nos produits</p></div>
+      <div class="row"><small>Petit titre · Overshoot 400 · 1.5rem</small><p class="t-h3">Livré en Suisse</p></div>
+      <div class="row"><small>Sur-titre · Barlow 600 · 0.78rem</small><p class="eyebrow">Pourquoi Bolzo</p></div>
+      <div class="row"><small>Accroche · Barlow 400 · 1.15rem</small><p class="t-lede">Un problème précis, un outil qui le règle.</p></div>
+      <div class="row"><small>Texte · Barlow 400 · 17px</small><p>Livraison gratuite partout en Suisse, en 2 à 4 jours ouvrables.</p></div>
+    </div>
+    <p class="note">Un seul mot en rouge par titre, au maximum.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">05 · Éléments</p>
+    <h2>Boutons et étiquettes</h2>
+    <div class="ui">
+      <span class="btn">Voir les produits<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <span class="btn hover">Survol</span>
+      <span class="btn2">Afficher plus</span>
+      <span class="link">Voir le produit<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <span class="badge">Populaire</span>
+      <span class="tag">Auto</span>
+      <span class="lang"><span>FR</span><span>DE</span></span>
+    </div>
+    <p class="note">Coins 10px, pilule pour étiquettes et badges, bordures 1px, pas d'ombres. Un seul bouton rouge par zone.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">06 · Icônes</p>
+    <h2>Icônes</h2>
+    <div class="icons" aria-label="Exemples d'icônes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+    </div>
+    <p class="note">Au trait, grille 24, épaisseur 1.8, bouts arrondis. Jamais d'emoji.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">07 · Ton et règles</p>
+    <h2>À faire, à éviter</h2>
+    <div class="rules">
+      <div class="rule yes">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>À faire</h3>
+        <ul>
+          <li>Tutoyer, en français et en allemand.</li>
+          <li>Allemand de Suisse : « ss », jamais « ß ».</li>
+          <li>Phrases courtes et concrètes.</li>
+          <li>Prix en CHF avec un point : CHF 29.90.</li>
+          <li>Chaque texte en FR et en DE.</li>
+          <li>Tester à 400px et 1280px.</li>
+        </ul>
+      </div>
+      <div class="rule no">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>À éviter</h3>
+        <ul>
+          <li>Une autre couleur vive, des dégradés, des ombres.</li>
+          <li>Une autre police, du faux gras.</li>
+          <li>Les emoji.</li>
+          <li>Plus d'un mot rouge par titre.</li>
+          <li>Fausse urgence, superlatifs, faux avis.</li>
+          <li>Infos fournisseur ou prix d'achat.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Bolzo.ch · Charte graphique</div>
+</footer>
+</body>
+</html>

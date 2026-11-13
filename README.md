@@ -17,6 +17,9 @@ La page KLARSICHT est sur https://jonlekern.github.io/Bolzo.ch/klarsicht/
 
 ## Marque
 
+Charte graphique complète : [`CHARTE.md`](CHARTE.md), et en version visuelle sur
+https://jonlekern.github.io/Bolzo.ch/charte.html
+
 Le logo et ses règles sont dans [`marque/`](marque/) : Overshoot Gentle Breeze,
 en rouge `#d3121b`.
 
@@ -40,6 +43,7 @@ Voir [`CHATGPT.md`](CHATGPT.md) : relier ChatGPT au repo et le message à lui do
 | `index.html` | Page d'accueil de la boutique (FR/DE) : présentation, produits, pourquoi Bolzo, FAQ |
 | `assets/` | Polices (Overshoot, Malabard et leurs licences) et images de la page d'accueil |
 | `.nojekyll` | Réglage technique pour GitHub Pages |
+| `CHARTE.md` / `charte.html` | Charte graphique (texte et visuelle) |
 | `.gitignore` | Fichiers système à ne pas envoyer sur GitHub |
 
 ## À ne jamais mettre ici
