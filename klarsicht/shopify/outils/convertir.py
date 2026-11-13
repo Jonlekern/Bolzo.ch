@@ -48,7 +48,7 @@ def scope_block(block):
         elif h.startswith("@font-face"):
             body = re.sub(r"url\(fonts/([^)]+)\)", r"url({{ '\1' | asset_url }})", body)
             res.append(lead + h + "{" + body + "}")
-        elif h.startswith("/*") or not h:
+        elif not h:
             res.append(head + "{" + body + "}")
         else:
             comment = ""

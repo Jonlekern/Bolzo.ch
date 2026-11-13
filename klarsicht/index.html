@@ -196,6 +196,7 @@ button{font:inherit;color:inherit}
 .site-footer{background:var(--fg);color:var(--paper);padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .site-footer .wrap{padding-block:48px 32px;display:grid;gap:28px}
 .site-footer .wordmark{font-size:clamp(3rem,10vw,7rem);line-height:.85;color:var(--paper)}
+.site-footer .tm{font-family:var(--f-body);font-weight:600;font-size:.16em;letter-spacing:.04em;vertical-align:top;position:relative;top:.35em;margin-left:.25em;line-height:1}
 .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid #343a42;padding-top:20px;font-size:.92rem;color:#aab1ba}
 .legal{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;margin:0;padding:0}
 .tagline{font-size:1.2rem;font-weight:500}
@@ -595,7 +596,7 @@ button{font:inherit;color:inherit}
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="wordmark">KLARSICHT</p>
+    <p class="wordmark">KLARSICHT<sup class="tm" aria-label="marque">TM</sup></p>
     <p class="tagline"><span lang="fr">Vois clair, même quand il pleut.</span><span lang="de">Klare Sicht, auch wenn es regnet.</span></p>
     <div class="foot-row">
       <ul class="legal">
