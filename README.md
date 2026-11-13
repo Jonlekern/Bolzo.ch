@@ -1,5 +1,7 @@
 # Bolzo.ch
 
+<img src="marque/logo-bolzo-rouge.svg" alt="Bolzo.ch" width="320">
+
 Boutique en ligne suisse, en français et en allemand, prix en CHF.
 
 ## Produits
@@ -11,6 +13,11 @@ Boutique en ligne suisse, en français et en allemand, prix en CHF.
 ## En ligne
 
 https://jonlekern.github.io/Bolzo.ch/ : ouvre directement la page KLARSHIT.
+
+## Marque
+
+Le logo et ses règles sont dans [`marque/`](marque/) : Overshoot Gentle Breeze,
+en rouge `#d3121b`.
 
 ## Organisation
 
