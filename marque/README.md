@@ -12,6 +12,8 @@ la police.
 | `logo-bolzo-blanc.png` | Même version en image, 2400 px de large, fond transparent. |
 | `logo-klarsicht-rouge.svg` / `.png` | Logo produit KLARSICHT, Malabard 800, rouge |
 | `logo-klarsicht-blanc.svg` / `.png` | Logo produit KLARSICHT, blanc |
+| `logo-klarsicht-ch-rouge.svg` / `.png` | KLARSICHT.ch, rouge |
+| `logo-klarsicht-ch-blanc.svg` / `.png` | KLARSICHT.ch, blanc |
 | `apercu/` | Aperçus des logos sur leur fond, pour la charte |
 
 Le rouge est le même que l'accent des pages produit (`--red` dans la charte de
