@@ -12,7 +12,8 @@ Boutique en ligne suisse, en français et en allemand, prix en CHF.
 
 ## En ligne
 
-https://jonlekern.github.io/Bolzo.ch/ : ouvre directement la page KLARSHIT.
+https://jonlekern.github.io/Bolzo.ch/ : la page d'accueil de la boutique.
+La page KLARSHIT est sur https://jonlekern.github.io/Bolzo.ch/klarshit/
 
 ## Marque
 
@@ -32,7 +33,8 @@ en rouge `#d3121b`.
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Renvoie vers la page KLARSHIT, en attendant une vraie page d'accueil |
+| `index.html` | Page d'accueil de la boutique (FR/DE) : présentation, produits, pourquoi Bolzo, FAQ |
+| `assets/` | Polices (Overshoot, Malabard et leurs licences) et images de la page d'accueil |
 | `.nojekyll` | Réglage technique pour GitHub Pages |
 | `.gitignore` | Fichiers système à ne pas envoyer sur GitHub |
 
