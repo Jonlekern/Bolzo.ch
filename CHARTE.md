@@ -3,16 +3,24 @@
 Version visuelle : [`charte.html`](charte.html), en ligne sur
 https://jonlekern.github.io/Bolzo.ch/charte.html
 
-## Logo
+## Logos
 
-| Fichier | Usage |
+| Bolzo.ch | KLARSICHT |
 |---|---|
-| `marque/logo-bolzo-rouge.svg` / `.png` | Sur fond clair |
-| `marque/logo-bolzo-blanc.svg` / `.png` | Sur fond noir ou sur photo |
+| <img src="marque/apercu/bolzo-rouge-sur-clair.png" alt="Bolzo.ch rouge sur fond clair" width="380"> | <img src="marque/apercu/klarsicht-rouge-sur-clair.png" alt="KLARSICHT rouge sur fond clair" width="380"> |
+| <img src="marque/apercu/bolzo-blanc-sur-noir.png" alt="Bolzo.ch blanc sur fond noir" width="380"> | <img src="marque/apercu/klarsicht-blanc-sur-noir.png" alt="KLARSICHT blanc sur fond noir" width="380"> |
+| Overshoot Gentle Breeze 400 | Malabard ExtraBold 800, capitales |
 
-- Écrit « Bolzo.ch », en **Overshoot Gentle Breeze 400**, converti en tracés.
+Fichiers dans [`marque/`](marque/), en SVG et en PNG transparent (2400 px) :
+
+| Logo | Fond clair | Fond noir ou photo |
+|---|---|---|
+| Bolzo.ch | `logo-bolzo-rouge.svg` / `.png` | `logo-bolzo-blanc.svg` / `.png` |
+| KLARSICHT | `logo-klarsicht-rouge.svg` / `.png` | `logo-klarsicht-blanc.svg` / `.png` |
+
+- Textes convertis en tracés : pas besoin d'installer les polices.
 - Ne pas déformer, pas d'ombre, de contour ni de dégradé.
-- Espace vide autour : au moins la hauteur du « o ».
+- Espace vide autour : au moins la hauteur d'une minuscule.
 - Le symbole TM s'ajoute seulement sur les grands logos produit (ex. pied de
   page KLARSICHT).
 
