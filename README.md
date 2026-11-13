@@ -27,6 +27,11 @@ en rouge `#d3121b`.
 
 Voir [`CHATGPT.md`](CHATGPT.md) : relier ChatGPT au repo et le message à lui donner.
 
+## Shopify
+
+Les deux pages (accueil + KLARSICHT) prêtes pour Shopify : dossier
+[`shopify/`](shopify/), guide [`shopify/GUIDE.md`](shopify/GUIDE.md).
+
 ## Organisation
 
 - **Un dossier par produit.** Chaque produit a sa page (`index.html`), ses images,

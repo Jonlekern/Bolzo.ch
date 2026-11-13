@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "bolzo": {
+      "type": "bolzo-accueil",
+      "settings": { "product": "klarsicht", "contact_email": "" }
+    }
+  },
+  "order": ["bolzo"]
+}

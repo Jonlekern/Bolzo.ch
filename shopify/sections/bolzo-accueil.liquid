@@ -1,0 +1,267 @@
+{%- comment -%}
+  Page d'accueil Bolzo.ch, générée depuis index.html par shopify/outils/construire.py.
+  L'en-tête, le bandeau et le pied de page sont ceux du thème.
+{%- endcomment -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+.bz h1,.bz h2,.bz h3,.bz p,.bz a,.bz button,.bz img,.bz ul,.bz li,.bz figure,.bz details,.bz summary{color:inherit;text-transform:none;letter-spacing:normal;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;margin:0;border:0;background:none;box-shadow:none;text-decoration:none}
+.bz{
+  /* colors: same palette as the KLARSICHT page, so home and product feel like one shop */
+  --bg:#f2f4f5;      /* page ground */
+  --paper:#ffffff;   /* cards, header */
+  --fg:#121519;      /* ink, dark bands */
+  --muted:#59616b;   /* secondary text */
+  --line:#d6dade;    /* hairlines */
+  --red:#d3121b;     /* Bolzo red, logo and accents */
+  /* fonts: titles = Overshoot Gentle Breeze 400 (as the logo), body = Barlow, KLARSICHT name = Malabard 800 */
+  --f-display:"Overshoot","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-klarsicht:"Malabard","Arial Black",Arial,sans-serif;
+  /* layout: 1180px wrapper, wide hero with photo, product grid 3 columns, one column on phones */
+  --max:1180px;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  --radius:10px;
+}
+@font-face{font-family:"Overshoot";src:url({{ 'Overshoot-GentleBreeze.woff2' | asset_url }}) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Malabard";src:url({{ 'Malabard-ExtraBold.woff2' | asset_url }}) format("woff2");font-weight:800;font-style:normal;font-display:swap}
+.bz:not(.de) [lang="de"],.bz.de [lang="fr"]{display:none!important}
+.bz *,.bz *::before,.bz *::after{box-sizing:border-box}
+.bz{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bz h1,.bz h2,.bz h3{font-family:var(--f-display);font-weight:400;font-synthesis:none;line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.bz p{margin:0}
+.bz a{color:inherit}
+.bz img{display:block;max-width:100%;height:auto}
+.bz button{font:inherit;color:inherit}
+.bz :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.bz .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.bz .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.bz .btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:var(--radius);background:var(--red);color:var(--paper);font-weight:600;font-size:1.05rem;padding:15px 22px;text-decoration:none;cursor:pointer;transition:background .15s}
+.bz .btn:hover{background:#b30f17}
+.bz .btn svg{width:18px;height:18px}
+.bz .link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px}
+.bz .link svg{width:16px;height:16px}
+.bz section[id]{scroll-margin-top:calc(80px + env(safe-area-inset-top,0px))}
+.bz .announce{background:var(--fg);color:var(--paper);font-size:.86rem;font-weight:500}
+.bz .announce .wrap{padding-block:8px;text-align:center}
+.bz .site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--line)}
+.bz .site-header .wrap{display:flex;align-items:center;gap:28px;padding-block:14px}
+.bz .logo{display:block;flex:none}
+.bz .logo img{height:26px;width:auto}
+.bz .nav{display:flex;gap:22px;font-weight:500;margin-right:auto}
+.bz .nav a{text-decoration:none;padding-block:4px;border-bottom:2px solid transparent}
+.bz .nav a:hover{border-bottom-color:var(--red)}
+.bz .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px;flex:none}
+.bz .lang button{border:0;background:none;padding:4px 10px;border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--muted)}
+.bz .lang button[aria-pressed="true"]{background:var(--fg);color:var(--paper)}
+.bz .hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;padding-block:64px 72px}
+.bz .hero-txt{min-width:0;display:grid;gap:22px;justify-items:start}
+.bz .hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem)}
+.bz .hero h1 em{font-style:normal;color:var(--red)}
+.bz .hero .lede{font-size:1.15rem;color:var(--muted);max-width:32em}
+.bz .hero-figure{margin:0;min-width:0;position:relative}
+.bz .hero-figure img{width:100%;border-radius:var(--radius);background:var(--paper)}
+.bz .hero-figure figcaption{position:absolute;left:14px;bottom:14px;background:var(--paper);border-radius:999px;padding:6px 14px;font-size:.9rem;font-weight:600;display:flex;gap:8px;align-items:center}
+.bz .hero-figure figcaption b{font-family:var(--f-klarsicht);font-weight:800;letter-spacing:.02em;color:var(--red)}
+.bz .products{background:var(--paper);border-block:1px solid var(--line)}
+.bz .products .wrap{padding-block:64px;display:grid;gap:28px}
+.bz .products-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 32px}
+.bz .products h2{font-size:clamp(2rem,4vw,3rem);margin-top:8px}
+.bz .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bz .card{grid-column:span 2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;min-width:0;transition:border-color .15s}
+.bz .card:hover{border-color:var(--fg)}
+.bz .card img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;background:var(--paper)}
+.bz .card-body{padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
+.bz .tag{justify-self:start;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.bz .card-name{font-family:var(--f-klarsicht);font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:.02em;color:var(--red)}
+.bz .card-body p{color:var(--muted)}
+.bz .card-price{font-size:1.05rem;color:var(--fg)}
+.bz .card-price strong{font-weight:600}
+.bz .card .link{margin-top:6px;justify-self:start}
+.bz .soon{border:1.5px dashed var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:12px;align-content:center;min-width:0}
+.bz .soon h3{font-size:1.5rem}
+.bz .soon p{color:var(--muted)}
+.bz .why .wrap{padding-block:72px;display:grid;gap:36px}
+.bz .why h2{font-size:clamp(2rem,4vw,3rem);max-width:14em}
+.bz .points{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bz .points li{border-top:2px solid var(--fg);padding-top:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.bz .points svg{width:30px;height:30px;color:var(--red)}
+.bz .points h3{font-size:1.35rem}
+.bz .points p{color:var(--muted)}
+.bz .faq{background:var(--paper);border-top:1px solid var(--line)}
+.bz .faq .wrap{padding-block:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px}
+.bz .faq h2{font-size:clamp(2rem,4vw,3rem)}
+.bz .faq .intro{display:grid;gap:12px;align-content:start}
+.bz .faq .intro p{color:var(--muted)}
+.bz .faq .list{border-top:2px solid var(--fg);min-width:0}
+.bz .faq details{border-bottom:1px solid var(--line)}
+.bz .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:10px;font-weight:600}
+.bz .faq summary::-webkit-details-marker{display:none}
+.bz .faq summary::after{content:"+";font-family:var(--f-display);font-size:1.4rem;line-height:1;color:var(--red);flex:none}
+.bz .faq details[open] summary::after{content:"\2013"}
+.bz .faq .a{padding-bottom:12px;color:var(--muted);font-size:.95rem;max-width:40em}
+.bz .plain-mail{font-weight:600;color:var(--fg);user-select:all}
+.bz .site-footer{background:var(--fg);color:var(--paper)}
+.bz .site-footer .wrap{padding-block:48px 32px;display:grid;gap:24px}
+.bz .site-footer .logo img{height:auto;width:min(520px,100%)}
+.bz .tagline{font-size:1.15rem;font-weight:500}
+.bz .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:.88rem;color:#aab1ba}
+.bz .foot-row ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.bz .demo-note{font-size:.85rem;color:#aab1ba}
+@media (max-width:860px){.bz .hero .wrap{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:40px 48px}
+.bz .grid{grid-template-columns:minmax(0,1fr)}
+.bz .card{grid-column:auto}
+.bz .points{grid-template-columns:minmax(0,1fr)}
+.bz .faq .wrap{grid-template-columns:minmax(0,1fr);gap:18px;padding-block:36px}
+.bz .why .wrap{padding-block:52px}
+.bz .products .wrap{padding-block:48px}
+
+}
+@media (max-width:640px){.bz .nav{display:none}
+.bz .site-header .wrap{justify-content:space-between}
+.bz .logo img{height:22px}
+.bz .card{grid-template-columns:minmax(0,1fr)}
+.bz .card img{aspect-ratio:4/3}
+
+}
+@media (prefers-reduced-motion:reduce){.bz *{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:no-preference){}
+
+
+</style>
+
+<div class="bz{% if request.locale.iso_code == 'de' %} de{% endif %}" id="bz">
+
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-txt">
+      <p class="eyebrow"><span lang="fr">Produits de niche pour passionnés</span><span lang="de">Nischenprodukte für Leidenschaftliche</span></p>
+      <h1 id="hero-title"><span lang="fr">L'outil qui manquait à ta <em>passion</em>.</span><span lang="de">Das Werkzeug, das deinem <em>Hobby</em> gefehlt hat.</span></h1>
+      <p class="lede" lang="fr">Bolzo choisit des produits pointus, introuvables en grande surface : un problème précis, un outil qui le règle. Livrés partout en Suisse.</p>
+      <p class="lede" lang="de">Bolzo wählt spezielle Produkte, die du im Grossverteiler nicht findest: ein genaues Problem, ein Werkzeug, das es löst. Geliefert in die ganze Schweiz.</p>
+      <a class="btn" href="#produits"><span lang="fr">Voir les produits</span><span lang="de">Produkte ansehen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </div>
+    <figure class="hero-figure">
+      <img src="{{ 'face.jpg' | file_url }}" width="720" height="720" alt="La brosse KLARSICHT rouge, de face et de côté." data-alt-fr="La brosse KLARSICHT rouge, de face et de côté." data-alt-de="Die rote KLARSICHT-Bürste, von vorne und von der Seite.">
+      <figcaption><span lang="fr">Premier produit :</span><span lang="de">Erstes Produkt:</span> <b>KLARSICHT</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="products" id="produits" aria-labelledby="products-title">
+  <div class="wrap">
+    <div class="products-head">
+      <div>
+        <p class="eyebrow"><span lang="fr">Boutique</span><span lang="de">Shop</span></p>
+        <h2 id="products-title"><span lang="fr">Nos produits</span><span lang="de">Unsere Produkte</span></h2>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="{{ section.settings.product.url | default: '/products/klarsicht' }}">
+        <img src="{{ 'duo.jpg' | file_url }}" width="720" height="720" alt="" loading="lazy">
+        <div class="card-body">
+          <span class="tag"><span lang="fr">Auto</span><span lang="de">Auto</span></span>
+          <span class="card-name">KLARSICHT</span>
+          <p lang="fr">La brosse qui retire le film gras et les traces d'eau du pare-brise et des rétroviseurs. Tu vois plus clair sous la pluie et de nuit.</p>
+          <p lang="de">Die Bürste, die Fettfilm und Wasserflecken von Windschutzscheibe und Spiegeln entfernt. Du siehst klarer bei Regen und in der Nacht.</p>
+          <p class="card-price"><span lang="fr">Dès</span><span lang="de">Ab</span> <strong>{% if section.settings.product %}{{ section.settings.product.price_min | money }}{% else %}CHF 29.90{% endif %}</strong> <span lang="fr">les 2 brosses</span><span lang="de">für 2 Bürsten</span></p>
+          <span class="link"><span lang="fr">Voir le produit</span><span lang="de">Zum Produkt</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <div class="soon">
+        <p class="eyebrow"><span lang="fr">Bientôt</span><span lang="de">Bald</span></p>
+        <h3><span lang="fr">D'autres passions arrivent.</span><span lang="de">Weitere Hobbys folgen.</span></h3>
+        <p lang="fr">On prépare les prochains produits. Tu as une idée d'outil qui manque à ton hobby ? Écris-nous à <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p>
+        <p lang="de">Wir bereiten die nächsten Produkte vor. Dir fehlt ein Werkzeug für dein Hobby? Schreib uns an <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="pourquoi" aria-labelledby="why-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="margin-bottom:8px"><span lang="fr">Pourquoi Bolzo</span><span lang="de">Warum Bolzo</span></p>
+      <h2 id="why-title"><span lang="fr">Peu de produits, chacun pour une vraie raison.</span><span lang="de">Wenige Produkte, jedes aus gutem Grund.</span></h2>
+    </div>
+    <ul class="points">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <h3><span lang="fr">De la niche</span><span lang="de">Nische</span></h3>
+        <p lang="fr">On cherche les outils que les grandes enseignes ne proposent pas, pour un hobby précis.</p>
+        <p lang="de">Wir suchen Werkzeuge, die grosse Ketten nicht führen, für ein bestimmtes Hobby.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>
+        <h3><span lang="fr">Livré en Suisse</span><span lang="de">Lieferung in der Schweiz</span></h3>
+        <p lang="fr">Livraison gratuite partout en Suisse, en 2 à 4 jours ouvrables.</p>
+        <p lang="de">Gratis Versand in der ganzen Schweiz, in 2–4 Werktagen.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        <h3><span lang="fr">Paiement en CHF</span><span lang="de">Bezahlung in CHF</span></h3>
+        <p lang="fr">TWINT, Visa, Mastercard, Apple Pay et Google Pay. Pas de frais de change.</p>
+        <p lang="de">TWINT, Visa, Mastercard, Apple Pay und Google Pay. Keine Wechselgebühren.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="faq-title"><span lang="fr">Questions</span><span lang="de">Fragen</span></h2>
+      <p lang="fr">Ta question n'est pas là ? Écris à <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p>
+      <p lang="de">Deine Frage fehlt? Schreib an <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p>
+    </div>
+    <div class="list">
+      <details><summary><span lang="fr">C'est quoi, Bolzo ?</span><span lang="de">Was ist Bolzo?</span></summary>
+        <div class="a"><p lang="fr">Une boutique suisse en ligne de produits de niche pour les passionnés. On commence par l'auto, avec KLARSICHT.</p><p lang="de">Ein Schweizer Onlineshop für Nischenprodukte für Leidenschaftliche. Wir starten mit dem Auto, mit KLARSICHT.</p></div></details>
+      <details><summary><span lang="fr">Combien coûte la livraison ?</span><span lang="de">Was kostet der Versand?</span></summary>
+        <div class="a"><p lang="fr">Rien : elle est gratuite partout en Suisse. Compte 2 à 4 jours ouvrables.</p><p lang="de">Nichts: Der Versand ist in der ganzen Schweiz gratis. Rechne mit 2–4 Werktagen.</p></div></details>
+      <details><summary><span lang="fr">Comment je peux payer ?</span><span lang="de">Wie kann ich bezahlen?</span></summary>
+        <div class="a"><p lang="fr">Avec TWINT, Visa, Mastercard, Apple Pay ou Google Pay, toujours en francs suisses.</p><p lang="de">Mit TWINT, Visa, Mastercard, Apple Pay oder Google Pay, immer in Schweizer Franken.</p></div></details>
+      <details><summary><span lang="fr">Un souci avec ma commande ?</span><span lang="de">Ein Problem mit meiner Bestellung?</span></summary>
+        <div class="a"><p lang="fr">Écris-nous avec ton numéro de commande et une photo. On trouve une solution avec toi.</p><p lang="de">Schreib uns mit deiner Bestellnummer und einem Foto. Wir finden mit dir eine Lösung.</p></div></details>
+      <details><summary><span lang="fr">Vous livrez hors de Suisse ?</span><span lang="de">Liefert ihr ausserhalb der Schweiz?</span></summary>
+        <div class="a"><p lang="fr">Pas pour l'instant. Bolzo livre uniquement en Suisse.</p><p lang="de">Im Moment nicht. Bolzo liefert nur in die Schweiz.</p></div></details>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById("bz");
+  if (!root) return;
+  var lang = root.classList.contains("de") ? "de" : "fr";
+
+  function applyLang(l){
+    lang = l;
+    root.classList.toggle("de", l === "de");
+    document.querySelectorAll("img[data-alt-" + l + "]").forEach(function(img){
+      img.alt = img.getAttribute("data-alt-" + l);
+    });
+  }
+
+
+  applyLang(lang);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Bolzo accueil",
+  "tag": "section",
+  "class": "bz-section",
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "product", "id": "product", "label": "Produit KLARSICHT", "info": "Sert au lien et au prix « dès » de la carte produit." },
+    { "type": "text", "id": "contact_email", "label": "Adresse e-mail de contact", "info": "Vide = adresse de la boutique." }
+  ],
+  "presets": [{ "name": "Bolzo accueil" }]
+}
+{% endschema %}

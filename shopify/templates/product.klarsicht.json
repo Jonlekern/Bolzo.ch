@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "klarsicht": {
+      "type": "klarsicht-produit",
+      "settings": {
+        "contact_email": "",
+        "video_url": "",
+        "show_example_reviews": false
+      }
+    }
+  },
+  "order": ["klarsicht"]
+}
