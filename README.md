@@ -9,6 +9,7 @@ Boutique en ligne suisse, en français et en allemand, prix en CHF.
 | Produit | Dossier | Statut |
 |---|---|---|
 | **KLARSICHT** : brosse anti-film gras pour vitres de voiture | [`klarsicht/`](klarsicht/) | Page de démonstration prête, version Shopify prête |
+| Kettenfreund, Siebfein, Rillenrein, Sohlenfit | [`kettenfreund/`](kettenfreund/), [`siebfein/`](siebfein/), [`rillenrein/`](rillenrein/), [`sohlenfit/`](sohlenfit/) | **Produits fictifs**, marqués « Exemple » : ils montrent la boutique avec plusieurs produits, rien n'est en vente |
 
 ## En ligne
 
@@ -46,7 +47,8 @@ Les deux pages (accueil + KLARSICHT) prêtes pour Shopify : dossier
 | Fichier | Rôle |
 |---|---|
 | `index.html` | Page d'accueil de la boutique (FR/DE) : présentation, produits, pourquoi Bolzo, FAQ |
-| `assets/` | Polices (Overshoot, Malabard et leurs licences) et images de la page d'accueil |
+| `a-propos/` | Page À propos (FR/DE) : la méthode, les règles, qui est derrière Bolzo |
+| `assets/` | Polices (Overshoot, Malabard et leurs licences), images de la page d'accueil, et `pages.css` : la feuille de style commune à la page À propos et aux pages d'exemple |
 | `.nojekyll` | Réglage technique pour GitHub Pages |
 | `CHARTE.md` / `charte.html` | Charte graphique (texte et visuelle) |
 | `.gitignore` | Fichiers système à ne pas envoyer sur GitHub |
