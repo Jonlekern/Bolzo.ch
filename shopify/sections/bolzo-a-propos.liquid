@@ -1,0 +1,218 @@
+{%- comment -%}
+  Page « À propos », générée depuis a-propos/index.html par shopify/outils/construire.py.
+{%- endcomment -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+.bz h1,.bz h2,.bz h3,.bz p,.bz a,.bz button,.bz img,.bz ul,.bz li,.bz figure,.bz details,.bz summary{color:inherit;text-transform:none;letter-spacing:normal;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;margin:0;border:0;background:none;box-shadow:none;text-decoration:none}
+.bz{
+  --bg:#f2f4f5;
+  --paper:#ffffff;
+  --fg:#121519;
+  --muted:#59616b;
+  --line:#d6dade;
+  --red:#d3121b;
+  --f-display:"Overshoot","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1180px;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  --radius:10px;
+}
+@font-face{font-family:"Overshoot";src:url({{ 'Overshoot-GentleBreeze.woff2' | asset_url }}) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+.bz:not(.fr) [lang="fr"],.bz.fr [lang="de"]{display:none!important}
+.bz *,.bz *::before,.bz *::after{box-sizing:border-box}
+.bz{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bz h1,.bz h2,.bz h3{font-family:var(--f-display);font-weight:400;font-synthesis:none;line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.bz p{margin:0}
+.bz a{color:inherit}
+.bz img{display:block;max-width:100%;height:auto}
+.bz button{font:inherit;color:inherit}
+.bz :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.bz .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.bz .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.bz .btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:var(--radius);background:var(--red);color:var(--paper);font-weight:600;font-size:1.05rem;padding:15px 22px;text-decoration:none;cursor:pointer;transition:background .15s}
+.bz .btn:hover{background:#b30f17}
+.bz .btn svg{width:18px;height:18px}
+.bz .btn-off{background:var(--paper);color:var(--muted);border:1.5px solid var(--line);cursor:not-allowed}
+.bz .btn-off:hover{background:var(--paper)}
+.bz .link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px}
+.bz .link svg{width:16px;height:16px}
+.bz .tag{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.bz .tag.demo{border-color:var(--red);color:var(--red)}
+.bz .tags{display:flex;flex-wrap:wrap;gap:6px}
+.bz .plain-mail{font-weight:600;color:var(--fg);user-select:all}
+.bz .announce{background:var(--fg);color:var(--paper);font-size:.86rem;font-weight:500}
+.bz .announce .wrap{padding-block:8px;text-align:center}
+.bz .site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--line)}
+.bz .site-header .wrap{display:flex;align-items:center;gap:28px;padding-block:14px}
+.bz .logo{display:block;flex:none}
+.bz .logo img{height:26px;width:auto}
+.bz .nav{display:flex;gap:22px;font-weight:500;margin-right:auto}
+.bz .nav a{text-decoration:none;padding-block:4px;border-bottom:2px solid transparent}
+.bz .nav a:hover,.bz .nav a[aria-current="page"]{border-bottom-color:var(--red)}
+.bz .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px;flex:none}
+.bz .lang button{border:0;background:none;padding:4px 10px;border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--muted)}
+.bz .lang button[aria-pressed="true"]{background:var(--fg);color:var(--paper)}
+.bz .site-footer{background:var(--fg);color:var(--paper)}
+.bz .site-footer .wrap{padding-block:48px 32px;display:grid;gap:24px}
+.bz .site-footer .logo img{height:auto;width:min(520px,100%)}
+.bz .tagline{font-size:1.15rem;font-weight:500}
+.bz .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:.88rem;color:#aab1ba}
+.bz .foot-row ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.bz .foot-row a{color:var(--paper)}
+.bz .demo-note{font-size:.85rem;color:#aab1ba}
+.bz .intro .wrap{padding-block:64px 56px;display:grid;gap:22px;justify-items:start}
+.bz .intro h1{font-size:clamp(2.4rem,5.6vw,4.4rem);max-width:13em}
+.bz .intro h1 em{font-style:normal;color:var(--red)}
+.bz .lede{font-size:1.15rem;color:var(--muted);max-width:34em}
+.bz .back{padding-block:20px 0}
+.bz .back a{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--muted)}
+.bz .back a:hover{color:var(--fg)}
+.bz .back svg{width:16px;height:16px}
+.bz .product .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:28px 64px}
+.bz .product-pic{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);aspect-ratio:1/1;display:grid;place-items:center}
+.bz .product-pic svg{width:34%;height:34%}
+.bz .buy{display:grid;gap:18px;justify-items:start;min-width:0}
+.bz .buy h1{font-size:clamp(2.4rem,5vw,3.8rem)}
+.bz .price{font-size:1.5rem;font-weight:600}
+.bz .buy .note{font-size:.9rem;color:var(--muted);max-width:30em}
+.bz .band{background:var(--paper);border-block:1px solid var(--line)}
+.bz .band .wrap,.bz .plain .wrap{padding-block:64px;display:grid;gap:32px}
+.bz .band + .band{border-top:0}
+.bz .band h2,.bz .plain h2{font-size:clamp(2rem,4vw,3rem);max-width:15em}
+.bz .points{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bz .points li{border-top:2px solid var(--fg);padding-top:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.bz .points svg{width:30px;height:30px;color:var(--red)}
+.bz .points h3{font-size:1.35rem}
+.bz .points p{color:var(--muted)}
+.bz .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:step}
+.bz .steps li{counter-increment:step;display:grid;gap:8px;align-content:start;min-width:0}
+.bz .steps li::before{content:counter(step);font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--red)}
+.bz .steps h3{font-size:1.35rem}
+.bz .steps p{color:var(--muted)}
+.bz .specs{margin:0;border-top:2px solid var(--fg);max-width:44em}
+.bz .specs div{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:16px;padding-block:10px;border-bottom:1px solid var(--line)}
+.bz .specs dt{font-weight:600}
+.bz .specs dd{margin:0;color:var(--muted)}
+.bz .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px;align-items:start}
+.bz .two .txt{display:grid;gap:14px;color:var(--muted);max-width:38em}
+.bz .nots{list-style:none;margin:0;padding:0;border-top:2px solid var(--fg);max-width:44em}
+.bz .nots li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding-block:14px;border-bottom:1px solid var(--line)}
+.bz .nots svg{width:22px;height:22px;margin-top:3px}
+.bz .nots b{font-weight:600;display:block}
+.bz .nots span.d{color:var(--muted)}
+.bz .cta{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+@media (max-width:860px){.bz .intro .wrap{padding-block:40px}
+.bz .product .wrap{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:20px 48px}
+.bz .product-pic{aspect-ratio:16/10}
+.bz .product-pic svg{width:auto;height:45%}
+.bz .band .wrap,.bz .plain .wrap{padding-block:48px;gap:24px}
+.bz .points,.bz .steps{grid-template-columns:minmax(0,1fr)}
+.bz .two{grid-template-columns:minmax(0,1fr);gap:18px}
+
+}
+@media (max-width:640px){.bz .nav{display:none}
+.bz .site-header .wrap{justify-content:space-between}
+.bz .logo img{height:22px}
+.bz .specs div{grid-template-columns:minmax(0,1fr);gap:2px}
+
+}
+@media (prefers-reduced-motion:reduce){.bz *{transition:none!important;scroll-behavior:auto!important}}
+.bz .legal{max-width:calc(46em + var(--gutter-l) + var(--gutter-r));margin-left:max(0px,calc((100% - var(--max)) / 2))}
+.bz .band .wrap.legal{gap:36px}
+.bz .legal .block{display:grid;gap:12px;min-width:0}
+.bz .legal h2{font-size:clamp(1.4rem,2.6vw,1.8rem);max-width:none}
+.bz .legal p,.bz .legal li,.bz .legal dd{color:var(--muted)}
+.bz .legal ul,.bz .legal ol{margin:0;padding-left:1.2em;display:grid;gap:8px}
+.bz .legal b{color:var(--fg);font-weight:600}
+.bz .legal a{color:var(--fg);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+.bz .legal .specs{max-width:none}
+.bz .todo{background:#fff1b8;color:var(--fg);border-radius:4px;padding:0 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.bz .draft{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px dashed var(--muted);border-radius:var(--radius);padding:12px 14px;font-size:.92rem}
+.bz .draft svg{flex:none;width:20px;height:20px;margin-top:2px}
+.bz .stamp{font-size:.9rem}
+.bz .mailbox{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;font-size:1.3rem}
+.bz .mailbox .plain-mail{overflow-wrap:anywhere}
+.bz .btn2{display:inline-flex;align-items:center;border:1.5px solid var(--fg);border-radius:var(--radius);background:var(--paper);font:600 1rem var(--f-body);color:var(--fg);padding:10px 16px;cursor:pointer}
+.bz .copied{font-size:.92rem;color:var(--muted)}
+.bz .notfound .wrap{padding-block:88px}
+.bz .foot-row a{text-underline-offset:3px}
+.bz .intro h1{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto;min-width:0;max-width:100%}
+.bz .intro .wrap > *{min-width:0}
+@media (max-width:640px){.bz .intro h1{font-size:clamp(1.9rem,8.6vw,2.6rem)}}
+
+
+</style>
+
+<div class="bz{% if request.locale.iso_code == 'fr' %} fr{% endif %}">
+
+
+<section class="intro" aria-labelledby="a-title">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="fr">À propos</span><span lang="de">Über uns</span></p>
+    <h1 id="a-title"><span lang="fr">Un problème précis, un outil qui le <em>règle</em>.</span><span lang="de">Ein genaues Problem, ein Werkzeug, das es <em>löst</em>.</span></h1>
+    <p class="lede" lang="fr">Bolzo est une petite boutique suisse en ligne. On ne vend pas de tout : on cherche, pour chaque passion, l'outil que les grandes enseignes n'ont pas en rayon.</p><p class="lede" lang="de">Bolzo ist ein kleiner Schweizer Onlineshop. Wir verkaufen nicht alles: Wir suchen für jedes Hobby das Werkzeug, das grosse Ketten nicht im Regal haben.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="how-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="margin-bottom:8px"><span lang="fr">Notre méthode</span><span lang="de">Unsere Methode</span></p>
+      <h2 id="how-title"><span lang="fr">Comment un produit arrive chez Bolzo.</span><span lang="de">Wie ein Produkt zu Bolzo kommt.</span></h2>
+    </div>
+    <ol class="steps">
+      <li><h3><span lang="fr">On part d'un agacement</span><span lang="de">Am Anfang steht ein Ärgernis</span></h3><p lang="fr">Un pare-brise qui éblouit sous la pluie, une chaîne de vélo encrassée. Pas d'outil sans problème réel à régler.</p><p lang="de">Eine Scheibe, die bei Regen blendet, eine verdreckte Velokette. Kein Werkzeug ohne echtes Problem.</p></li>
+      <li><h3><span lang="fr">On l'essaie nous-mêmes</span><span lang="de">Wir testen selbst</span></h3><p lang="fr">Chaque produit est commandé, utilisé et comparé avant d'être proposé. S'il ne tient pas sa promesse, il n'entre pas dans la boutique.</p><p lang="de">Jedes Produkt wird bestellt, benutzt und verglichen, bevor wir es anbieten. Hält es nicht, was es verspricht, kommt es nicht in den Shop.</p></li>
+      <li><h3><span lang="fr">On l'explique simplement</span><span lang="de">Wir erklären es einfach</span></h3><p lang="fr">Une page par produit, qui dit ce qu'il fait, comment on s'en sert et ce qu'il ne fait pas.</p><p lang="de">Eine Seite pro Produkt, die sagt, was es kann, wie man es benutzt und was es nicht kann.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="plain" aria-labelledby="not-title">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <p class="eyebrow" style="margin-bottom:8px"><span lang="fr">Nos règles</span><span lang="de">Unsere Regeln</span></p>
+        <h2 id="not-title"><span lang="fr">Ce que tu ne verras pas ici.</span><span lang="de">Was du hier nicht findest.</span></h2>
+      </div>
+      <ul class="nots">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg><div><b><span lang="fr">De faux avis</span><span lang="de">Gefälschte Bewertungen</span></b><span class="d"><span lang="fr">Un avis affiché vient d'un client qui a reçu le produit. Sinon il n'y en a pas.</span><span lang="de">Eine Bewertung stammt von jemandem, der das Produkt erhalten hat. Sonst gibt es keine.</span></span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg><div><b><span lang="fr">De la fausse urgence</span><span lang="de">Künstliche Eile</span></b><span class="d"><span lang="fr">Pas de compte à rebours ni de « plus que 3 en stock » inventé.</span><span lang="de">Kein Countdown und kein erfundenes «nur noch 3 an Lager».</span></span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg><div><b><span lang="fr">Des promesses floues</span><span lang="de">Vage Versprechen</span></b><span class="d"><span lang="fr">On écrit ce que l'outil fait, avec des mots simples et sans superlatifs.</span><span lang="de">Wir schreiben, was das Werkzeug kann, in einfachen Worten und ohne Superlative.</span></span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg><div><b><span lang="fr">Des frais cachés</span><span lang="de">Versteckte Kosten</span></b><span class="d"><span lang="fr">Le prix affiché est en francs suisses et la livraison en Suisse est comprise.</span><span lang="de">Der angezeigte Preis ist in Schweizer Franken, der Versand in der Schweiz ist inbegriffen.</span></span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="two">
+      <h2 id="who-title"><span lang="fr">Qui est derrière Bolzo.</span><span lang="de">Wer hinter Bolzo steht.</span></h2>
+      <div class="txt">
+        <p lang="fr">Bolzo est une boutique indépendante, sans grande enseigne ni catalogue de mille références derrière elle. On commence petit, par l'auto, avec KLARSICHT.</p><p lang="de">Bolzo ist ein unabhängiger Shop, ohne grosse Kette und ohne Katalog mit tausend Artikeln im Rücken. Wir fangen klein an, beim Auto, mit KLARSICHT.</p>
+        <p lang="fr">La boutique est encore en préparation. Le nom et l'adresse de l'entreprise seront publiés dans l'Impressum avant l'ouverture.</p><p lang="de">Der Shop ist noch im Aufbau. Name und Adresse der Firma stehen vor der Eröffnung im Impressum.</p>
+        <p lang="fr">Une question, ou une idée d'outil qui manque à ton hobby ? Écris à <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p><p lang="de">Eine Frage oder eine Idee für ein Werkzeug, das deinem Hobby fehlt? Schreib an <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p>
+        <p class="cta"><a class="btn" href="{{ routes.root_url | append: '/#produits' | replace: '//', '/' }}"><span lang="fr">Voir les produits</span><span lang="de">Produkte ansehen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+
+{% schema %}
+{
+  "name": "Bolzo À propos",
+  "tag": "section",
+  "class": "bz-section",
+  "enabled_on": { "templates": ["page"] },
+  "settings": [
+    { "type": "text", "id": "contact_email", "label": "Adresse e-mail de contact", "info": "Vide = adresse de la boutique." }
+  ],
+  "presets": [{ "name": "Bolzo À propos" }]
+}
+{% endschema %}

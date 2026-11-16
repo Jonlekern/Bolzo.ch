@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "bolzo-livraison-retours", "settings": { "contact_email": "" } }
+  },
+  "order": ["main"]
+}

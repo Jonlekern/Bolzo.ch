@@ -2,7 +2,7 @@
   "sections": {
     "bolzo": {
       "type": "bolzo-accueil",
-      "settings": { "product": "klarsicht", "contact_email": "" }
+      "settings": { "product": "klarsicht", "contact_email": "", "show_examples": false }
     }
   },
   "order": ["bolzo"]

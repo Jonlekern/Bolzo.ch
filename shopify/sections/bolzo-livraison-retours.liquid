@@ -1,0 +1,197 @@
+{%- comment -%}
+  Page « livraison », générée depuis livraison-retours/index.html par shopify/outils/construire.py.
+{%- endcomment -%}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+.bz h1,.bz h2,.bz h3,.bz p,.bz a,.bz button,.bz img,.bz ul,.bz li,.bz figure,.bz details,.bz summary{color:inherit;text-transform:none;letter-spacing:normal;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;margin:0;border:0;background:none;box-shadow:none;text-decoration:none}
+.bz{
+  --bg:#f2f4f5;
+  --paper:#ffffff;
+  --fg:#121519;
+  --muted:#59616b;
+  --line:#d6dade;
+  --red:#d3121b;
+  --f-display:"Overshoot","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1180px;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  --radius:10px;
+}
+@font-face{font-family:"Overshoot";src:url({{ 'Overshoot-GentleBreeze.woff2' | asset_url }}) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+.bz:not(.fr) [lang="fr"],.bz.fr [lang="de"]{display:none!important}
+.bz *,.bz *::before,.bz *::after{box-sizing:border-box}
+.bz{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bz h1,.bz h2,.bz h3{font-family:var(--f-display);font-weight:400;font-synthesis:none;line-height:1.05;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.bz p{margin:0}
+.bz a{color:inherit}
+.bz img{display:block;max-width:100%;height:auto}
+.bz button{font:inherit;color:inherit}
+.bz :focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.bz .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.bz .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.bz .btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:var(--radius);background:var(--red);color:var(--paper);font-weight:600;font-size:1.05rem;padding:15px 22px;text-decoration:none;cursor:pointer;transition:background .15s}
+.bz .btn:hover{background:#b30f17}
+.bz .btn svg{width:18px;height:18px}
+.bz .btn-off{background:var(--paper);color:var(--muted);border:1.5px solid var(--line);cursor:not-allowed}
+.bz .btn-off:hover{background:var(--paper)}
+.bz .link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px}
+.bz .link svg{width:16px;height:16px}
+.bz .tag{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.bz .tag.demo{border-color:var(--red);color:var(--red)}
+.bz .tags{display:flex;flex-wrap:wrap;gap:6px}
+.bz .plain-mail{font-weight:600;color:var(--fg);user-select:all}
+.bz .announce{background:var(--fg);color:var(--paper);font-size:.86rem;font-weight:500}
+.bz .announce .wrap{padding-block:8px;text-align:center}
+.bz .site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--line)}
+.bz .site-header .wrap{display:flex;align-items:center;gap:28px;padding-block:14px}
+.bz .logo{display:block;flex:none}
+.bz .logo img{height:26px;width:auto}
+.bz .nav{display:flex;gap:22px;font-weight:500;margin-right:auto}
+.bz .nav a{text-decoration:none;padding-block:4px;border-bottom:2px solid transparent}
+.bz .nav a:hover,.bz .nav a[aria-current="page"]{border-bottom-color:var(--red)}
+.bz .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px;flex:none}
+.bz .lang button{border:0;background:none;padding:4px 10px;border-radius:999px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--muted)}
+.bz .lang button[aria-pressed="true"]{background:var(--fg);color:var(--paper)}
+.bz .site-footer{background:var(--fg);color:var(--paper)}
+.bz .site-footer .wrap{padding-block:48px 32px;display:grid;gap:24px}
+.bz .site-footer .logo img{height:auto;width:min(520px,100%)}
+.bz .tagline{font-size:1.15rem;font-weight:500}
+.bz .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:.88rem;color:#aab1ba}
+.bz .foot-row ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.bz .foot-row a{color:var(--paper)}
+.bz .demo-note{font-size:.85rem;color:#aab1ba}
+.bz .intro .wrap{padding-block:64px 56px;display:grid;gap:22px;justify-items:start}
+.bz .intro h1{font-size:clamp(2.4rem,5.6vw,4.4rem);max-width:13em}
+.bz .intro h1 em{font-style:normal;color:var(--red)}
+.bz .lede{font-size:1.15rem;color:var(--muted);max-width:34em}
+.bz .back{padding-block:20px 0}
+.bz .back a{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--muted)}
+.bz .back a:hover{color:var(--fg)}
+.bz .back svg{width:16px;height:16px}
+.bz .product .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:28px 64px}
+.bz .product-pic{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);aspect-ratio:1/1;display:grid;place-items:center}
+.bz .product-pic svg{width:34%;height:34%}
+.bz .buy{display:grid;gap:18px;justify-items:start;min-width:0}
+.bz .buy h1{font-size:clamp(2.4rem,5vw,3.8rem)}
+.bz .price{font-size:1.5rem;font-weight:600}
+.bz .buy .note{font-size:.9rem;color:var(--muted);max-width:30em}
+.bz .band{background:var(--paper);border-block:1px solid var(--line)}
+.bz .band .wrap,.bz .plain .wrap{padding-block:64px;display:grid;gap:32px}
+.bz .band + .band{border-top:0}
+.bz .band h2,.bz .plain h2{font-size:clamp(2rem,4vw,3rem);max-width:15em}
+.bz .points{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bz .points li{border-top:2px solid var(--fg);padding-top:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.bz .points svg{width:30px;height:30px;color:var(--red)}
+.bz .points h3{font-size:1.35rem}
+.bz .points p{color:var(--muted)}
+.bz .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:step}
+.bz .steps li{counter-increment:step;display:grid;gap:8px;align-content:start;min-width:0}
+.bz .steps li::before{content:counter(step);font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--red)}
+.bz .steps h3{font-size:1.35rem}
+.bz .steps p{color:var(--muted)}
+.bz .specs{margin:0;border-top:2px solid var(--fg);max-width:44em}
+.bz .specs div{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:16px;padding-block:10px;border-bottom:1px solid var(--line)}
+.bz .specs dt{font-weight:600}
+.bz .specs dd{margin:0;color:var(--muted)}
+.bz .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:40px;align-items:start}
+.bz .two .txt{display:grid;gap:14px;color:var(--muted);max-width:38em}
+.bz .nots{list-style:none;margin:0;padding:0;border-top:2px solid var(--fg);max-width:44em}
+.bz .nots li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding-block:14px;border-bottom:1px solid var(--line)}
+.bz .nots svg{width:22px;height:22px;margin-top:3px}
+.bz .nots b{font-weight:600;display:block}
+.bz .nots span.d{color:var(--muted)}
+.bz .cta{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center}
+@media (max-width:860px){.bz .intro .wrap{padding-block:40px}
+.bz .product .wrap{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:20px 48px}
+.bz .product-pic{aspect-ratio:16/10}
+.bz .product-pic svg{width:auto;height:45%}
+.bz .band .wrap,.bz .plain .wrap{padding-block:48px;gap:24px}
+.bz .points,.bz .steps{grid-template-columns:minmax(0,1fr)}
+.bz .two{grid-template-columns:minmax(0,1fr);gap:18px}
+
+}
+@media (max-width:640px){.bz .nav{display:none}
+.bz .site-header .wrap{justify-content:space-between}
+.bz .logo img{height:22px}
+.bz .specs div{grid-template-columns:minmax(0,1fr);gap:2px}
+
+}
+@media (prefers-reduced-motion:reduce){.bz *{transition:none!important;scroll-behavior:auto!important}}
+.bz .legal{max-width:calc(46em + var(--gutter-l) + var(--gutter-r));margin-left:max(0px,calc((100% - var(--max)) / 2))}
+.bz .band .wrap.legal{gap:36px}
+.bz .legal .block{display:grid;gap:12px;min-width:0}
+.bz .legal h2{font-size:clamp(1.4rem,2.6vw,1.8rem);max-width:none}
+.bz .legal p,.bz .legal li,.bz .legal dd{color:var(--muted)}
+.bz .legal ul,.bz .legal ol{margin:0;padding-left:1.2em;display:grid;gap:8px}
+.bz .legal b{color:var(--fg);font-weight:600}
+.bz .legal a{color:var(--fg);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+.bz .legal .specs{max-width:none}
+.bz .todo{background:#fff1b8;color:var(--fg);border-radius:4px;padding:0 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.bz .draft{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px dashed var(--muted);border-radius:var(--radius);padding:12px 14px;font-size:.92rem}
+.bz .draft svg{flex:none;width:20px;height:20px;margin-top:2px}
+.bz .stamp{font-size:.9rem}
+.bz .mailbox{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;font-size:1.3rem}
+.bz .mailbox .plain-mail{overflow-wrap:anywhere}
+.bz .btn2{display:inline-flex;align-items:center;border:1.5px solid var(--fg);border-radius:var(--radius);background:var(--paper);font:600 1rem var(--f-body);color:var(--fg);padding:10px 16px;cursor:pointer}
+.bz .copied{font-size:.92rem;color:var(--muted)}
+.bz .notfound .wrap{padding-block:88px}
+.bz .foot-row a{text-underline-offset:3px}
+.bz .intro h1{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto;min-width:0;max-width:100%}
+.bz .intro .wrap > *{min-width:0}
+@media (max-width:640px){.bz .intro h1{font-size:clamp(1.9rem,8.6vw,2.6rem)}}
+
+
+</style>
+
+<div class="bz{% if request.locale.iso_code == 'fr' %} fr{% endif %}">
+
+
+<section class="intro" aria-labelledby="p-title">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="fr">Service</span><span lang="de">Service</span></p>
+    <h1 id="p-title"><span lang="fr">Livraison et retours</span><span lang="de">Versand und Rückgabe</span></h1>
+    <p class="lede" lang="fr">Combien de temps, combien ça coûte, et que faire si quelque chose ne va pas.</p><p class="lede" lang="de">Wie lange es dauert, was es kostet, und was du tun kannst, wenn etwas nicht stimmt.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap legal">
+    <p class="draft"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span lang="fr">Modèle à compléter. Les passages surlignés sont à remplir, et le texte est à faire vérifier par un juriste avant l’ouverture de la boutique.</span><span lang="de">Vorlage zum Ergänzen. Die markierten Stellen sind auszufüllen, und der Text ist vor der Eröffnung des Shops juristisch zu prüfen.</span></p>
+    <div class="block">
+      <h2><span lang="fr">Livraison</span><span lang="de">Versand</span></h2>
+      <dl class="specs"><div><dt><span lang="fr">Zone</span><span lang="de">Liefergebiet</span></dt><dd><span lang="fr">Suisse uniquement</span><span lang="de">Nur Schweiz</span></dd></div><div><dt><span lang="fr">Prix</span><span lang="de">Kosten</span></dt><dd><span lang="fr">Gratuit, compris dans le prix affiché</span><span lang="de">Gratis, im angezeigten Preis inbegriffen</span></dd></div><div><dt><span lang="fr">Délai</span><span lang="de">Lieferfrist</span></dt><dd><mark class="todo"><span lang="fr">2 à 4 jours ouvrables</span><span lang="de">2–4 Werktage</span></mark></dd></div><div><dt><span lang="fr">Transporteur</span><span lang="de">Transport</span></dt><dd><mark class="todo"><span lang="fr">p. ex. La Poste Suisse</span><span lang="de">z. B. Die Schweizerische Post</span></mark></dd></div><div><dt><span lang="fr">Suivi</span><span lang="de">Sendungsverfolgung</span></dt><dd><span lang="fr">Tu reçois un lien de suivi par e-mail à l'expédition.</span><span lang="de">Beim Versand erhältst du per E-Mail einen Link zur Sendungsverfolgung.</span></dd></div></dl>
+    </div>
+    <div class="block">
+      <h2><span lang="fr">Retours</span><span lang="de">Rückgabe</span></h2>
+      <p lang="fr">Tu peux nous renvoyer un produit dans les <mark class="todo"><span lang="fr">14</span><span lang="de">14</span></mark> jours après réception, s'il est inutilisé et dans son emballage d'origine. Les produits entamés qui contiennent un liquide ne sont pas repris, pour des raisons d'hygiène et de sécurité.</p><p lang="de">Du kannst ein Produkt innert <mark class="todo"><span lang="fr">14</span><span lang="de">14</span></mark> Tagen nach Erhalt zurückschicken, wenn es unbenutzt und in der Originalverpackung ist. Angebrochene Produkte mit Flüssigkeit nehmen wir aus Hygiene- und Sicherheitsgründen nicht zurück.</p>
+      <ol class="how"><li><span lang="fr">Écris à <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span> avec ton numéro de commande.</span><span lang="de">Schreib an <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span> mit deiner Bestellnummer.</span></li><li><span lang="fr">Nous t'envoyons l'adresse de retour.</span><span lang="de">Wir schicken dir die Rücksendeadresse.</span></li><li><span lang="fr">Renvoie le colis. Les frais de retour sont <mark class="todo"><span lang="fr">à ta charge / à notre charge</span><span lang="de">von dir / von uns</span></mark> .</span><span lang="de">Schick das Paket zurück. Die Rücksendekosten werden <mark class="todo"><span lang="fr">à ta charge / à notre charge</span><span lang="de">von dir / von uns</span></mark> getragen.</span></li><li><span lang="fr">Nous te remboursons sur le moyen de paiement utilisé, dans les <mark class="todo"><span lang="fr">10</span><span lang="de">10</span></mark> jours après réception du retour.</span><span lang="de">Wir erstatten den Betrag auf das verwendete Zahlungsmittel, innert <mark class="todo"><span lang="fr">10</span><span lang="de">10</span></mark> Tagen nach Eingang der Rücksendung.</span></li></ol>
+    </div>
+    <div class="block">
+      <h2><span lang="fr">Colis abîmé ou produit défectueux</span><span lang="de">Beschädigtes Paket oder defektes Produkt</span></h2>
+      <p lang="fr">Écris-nous à <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span> avec ton numéro de commande et une photo. Nous remplaçons le produit ou nous te remboursons, sans frais pour toi.</p><p lang="de">Schreib uns an <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span> mit deiner Bestellnummer und einem Foto. Wir ersetzen das Produkt oder erstatten den Betrag, ohne Kosten für dich.</p>
+    </div>
+    <div class="block">
+      <h2><span lang="fr">Colis non reçu</span><span lang="de">Paket nicht angekommen</span></h2>
+      <p lang="fr">Vérifie d'abord le lien de suivi. Si le colis n'avance plus ou est indiqué comme livré sans que tu l'aies reçu, écris-nous : nous ouvrons une recherche auprès du transporteur.</p><p lang="de">Prüfe zuerst den Link zur Sendungsverfolgung. Bewegt sich das Paket nicht mehr oder gilt es als zugestellt, ohne dass du es erhalten hast, schreib uns: Wir starten eine Nachforschung beim Transportunternehmen.</p>
+    </div>
+    <p class="stamp"><span lang="fr">Version du</span><span lang="de">Stand:</span> <mark class="todo"><span lang="fr">date</span><span lang="de">Datum</span></mark></p>
+  </div>
+</section>
+
+
+</div>
+
+
+{% schema %}
+{
+  "name": "Bolzo livraison",
+  "tag": "section",
+  "class": "bz-section",
+  "enabled_on": { "templates": ["page"] },
+  "settings": [
+    { "type": "text", "id": "contact_email", "label": "Adresse e-mail de contact", "info": "Vide = adresse de la boutique." }
+  ],
+  "presets": [{ "name": "Bolzo livraison" }]
+}
+{% endschema %}

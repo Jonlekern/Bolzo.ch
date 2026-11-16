@@ -78,7 +78,16 @@
 .bz .card-price{font-size:1.05rem;color:var(--fg)}
 .bz .card-price strong{font-weight:600}
 .bz .card .link{margin-top:6px;justify-self:start}
-.bz .soon{border:1.5px dashed var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:12px;align-content:center;min-width:0}
+.bz .mini{display:grid;grid-template-rows:auto 1fr;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-width:0;text-decoration:none;transition:border-color .15s}
+.bz .mini:hover{border-color:var(--fg)}
+.bz .mini .link{margin-top:6px;justify-self:start}
+.bz .mini-pic{background:var(--paper);border-bottom:1px solid var(--line);height:150px;display:grid;place-items:center}
+.bz .mini-pic svg{width:64px;height:64px}
+.bz .mini h3{font-size:1.5rem}
+.bz .tags{display:flex;flex-wrap:wrap;gap:6px}
+.bz .tag.demo{border-color:var(--red);color:var(--red)}
+.bz .grid-note{font-size:.88rem;color:var(--muted)}
+.bz .soon{grid-column:1/-1;border:1.5px dashed var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:12px;align-content:center;min-width:0}
 .bz .soon h3{font-size:1.5rem}
 .bz .soon p{color:var(--muted)}
 .bz .why .wrap{padding-block:72px;display:grid;gap:36px}
@@ -107,6 +116,7 @@
 .bz .tagline{font-size:1.15rem;font-weight:500}
 .bz .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;font-size:.88rem;color:#aab1ba}
 .bz .foot-row ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.bz .foot-row a{color:var(--paper)}
 .bz .demo-note{font-size:.85rem;color:#aab1ba}
 @media (max-width:860px){.bz .hero .wrap{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:40px 48px}
 .bz .grid{grid-template-columns:minmax(0,1fr)}
@@ -169,6 +179,46 @@
           <span class="link"><span lang="fr">Voir le produit</span><span lang="de">Zum Produkt</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
+      {% if section.settings.show_examples %}<div class="mini">
+        <div class="mini-pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-8h6l2 8M10 8l4 8M9 8h2.5M15 6h2"/></svg></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag"><span lang="fr">Vélo</span><span lang="de">Velo</span></span><span class="tag demo"><span lang="fr">Exemple</span><span lang="de">Beispiel</span></span></div>
+          <h3>Kettenfreund</h3>
+          <p lang="fr">Le nettoie-chaîne qui se clipse sur ta chaîne : trois brosses, vingt tours de pédale, et elle est propre sans rien démonter.</p>
+          <p lang="de">Der Kettenreiniger zum Aufklipsen: drei Bürsten, zwanzig Pedalumdrehungen, und deine Kette ist sauber, ohne etwas abzubauen.</p>
+          <p class="card-price"><strong>CHF 24.90</strong></p>
+        </div>
+      </div>{% endif %}
+      {% if section.settings.show_examples %}<div class="mini">
+        <div class="mini-pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v2M12 3v2"/></svg></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag"><span lang="fr">Café</span><span lang="de">Kaffee</span></span><span class="tag demo"><span lang="fr">Exemple</span><span lang="de">Beispiel</span></span></div>
+          <h3>Siebfein</h3>
+          <p lang="fr">L'outil à fines aiguilles qui casse les grumeaux de mouture dans le porte-filtre. Ton espresso coule de façon régulière.</p>
+          <p lang="de">Das Werkzeug mit feinen Nadeln, das Klumpen im Kaffeemehl im Siebträger auflöst. Dein Espresso läuft gleichmässig.</p>
+          <p class="card-price"><strong>CHF 19.90</strong></p>
+        </div>
+      </div>{% endif %}
+      {% if section.settings.show_examples %}<div class="mini">
+        <div class="mini-pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 12h.01"/></svg></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag"><span lang="fr">Vinyle</span><span lang="de">Vinyl</span></span><span class="tag demo"><span lang="fr">Exemple</span><span lang="de">Beispiel</span></span></div>
+          <h3>Rillenrein</h3>
+          <p lang="fr">La brosse antistatique en fibres de carbone : un tour de platine et la poussière quitte le sillon avant l'écoute.</p>
+          <p lang="de">Die antistatische Carbonbürste: eine Umdrehung auf dem Plattenteller, und der Staub ist aus der Rille, bevor du hörst.</p>
+          <p class="card-price"><strong>CHF 22.90</strong></p>
+        </div>
+      </div>{% endif %}
+      {% if section.settings.show_examples %}<div class="mini">
+        <div class="mini-pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19l6-11 4 7 2-3 6 7z"/><circle cx="17" cy="6" r="1.6"/></svg></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag"><span lang="fr">Rando</span><span lang="de">Wandern</span></span><span class="tag demo"><span lang="fr">Exemple</span><span lang="de">Beispiel</span></span></div>
+          <h3>Sohlenfit</h3>
+          <p lang="fr">La brosse pliable qui décrotte tes semelles au retour de randonnée. La boue reste sur le parking, pas dans la voiture.</p>
+          <p lang="de">Die faltbare Bürste, die deine Sohlen nach der Wanderung von Dreck befreit. Der Schlamm bleibt auf dem Parkplatz, nicht im Auto.</p>
+          <p class="card-price"><strong>CHF 14.90</strong></p>
+        </div>
+      </div>{% endif %}
       <div class="soon">
         <p class="eyebrow"><span lang="fr">Bientôt</span><span lang="de">Bald</span></p>
         <h3><span lang="fr">D'autres passions arrivent.</span><span lang="de">Weitere Hobbys folgen.</span></h3>
@@ -176,6 +226,7 @@
         <p lang="de">Wir bereiten die nächsten Produkte vor. Dir fehlt ein Werkzeug für dein Hobby? Schreib uns an <span class="plain-mail">{{ section.settings.contact_email | default: shop.email }}</span>.</p>
       </div>
     </div>
+    {% if section.settings.show_examples %}<p class="grid-note"><span lang="fr">Les quatre produits marqués « Exemple » sont fictifs : ils montrent à quoi ressemblera la boutique et ne sont pas en vente.</span><span lang="de">Die vier Produkte mit «Beispiel» sind erfunden: Sie zeigen, wie der Shop aussehen wird, und sind nicht zu kaufen.</span></p>{% endif %}
   </div>
 </section>
 
@@ -260,7 +311,8 @@
   "enabled_on": { "templates": ["index"] },
   "settings": [
     { "type": "product", "id": "product", "label": "Produit KLARSICHT", "info": "Sert au lien et au prix « dès » de la carte produit." },
-    { "type": "text", "id": "contact_email", "label": "Adresse e-mail de contact", "info": "Vide = adresse de la boutique." }
+    { "type": "text", "id": "contact_email", "label": "Adresse e-mail de contact", "info": "Vide = adresse de la boutique." },
+    { "type": "checkbox", "id": "show_examples", "label": "Afficher les produits d'exemple", "default": false, "info": "Produits fictifs, pour une démo uniquement. À laisser décoché sur une vraie boutique." }
   ],
   "presets": [{ "name": "Bolzo accueil" }]
 }

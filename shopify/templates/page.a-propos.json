@@ -1,0 +1,6 @@
+{
+  "sections": {
+    "main": { "type": "bolzo-a-propos", "settings": { "contact_email": "" } }
+  },
+  "order": ["main"]
+}
