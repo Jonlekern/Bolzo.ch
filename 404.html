@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page introuvable / Seite nicht gefunden · Bolzo.ch</title>
+<meta name="description" content="Page introuvable sur Bolzo.ch.">
+<script>document.write('<base href="' + (location.hostname.endsWith("github.io") ? "/Bolzo.ch/" : "/") + '">');</script>
+<meta name="robots" content="noindex">
+<link rel="icon" href="marque/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="marque/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="marque/favicon-180.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+
+<div class="announce">
+  <div class="wrap">
+    <span lang="fr">Livraison gratuite partout en Suisse · Paiement en CHF</span><span lang="de">Gratis Versand in der ganzen Schweiz · Bezahlung in CHF</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Bolzo.ch"><img src="marque/logo-bolzo-rouge.svg" alt="Bolzo.ch" width="160" height="28"></a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="./#produits"><span lang="fr">Produits</span><span lang="de">Produkte</span></a>
+      <a href="./#pourquoi"><span lang="fr">Pourquoi Bolzo</span><span lang="de">Warum Bolzo</span></a>
+      <a href="a-propos/"><span lang="fr">À propos</span><span lang="de">Über uns</span></a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Langue / Sprache">
+      <button type="button" data-set-lang="de" aria-pressed="true">DE</button>
+      <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="intro notfound" aria-labelledby="p-title">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="fr">Erreur 404</span><span lang="de">Fehler 404</span></p>
+    <h1 id="p-title"><span lang="fr">Cette page n'existe <em>pas</em>.</span><span lang="de">Diese Seite gibt es <em>nicht</em>.</span></h1>
+    <p class="lede" lang="fr">Le lien est peut-être ancien ou mal recopié. Les produits, eux, sont toujours là.</p><p class="lede" lang="de">Der Link ist vielleicht alt oder falsch abgetippt. Die Produkte sind aber noch da.</p>
+    <p class="cta"><a class="btn" href="./"><span lang="fr">Retour à l'accueil</span><span lang="de">Zur Startseite</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="link" href="contact/"><span lang="fr">Nous écrire</span><span lang="de">Schreib uns</span></a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Bolzo.ch"><img src="marque/logo-bolzo-blanc.svg" alt="Bolzo.ch" width="520" height="91" loading="lazy"></a>
+    <p class="tagline"><span lang="fr">L'outil qui manquait à ta passion.</span><span lang="de">Das Werkzeug, das deinem Hobby gefehlt hat.</span></p>
+    <div class="foot-row">
+      <ul>
+        <li><a href="a-propos/"><span lang="fr">À propos</span><span lang="de">Über uns</span></a></li>
+        <li><a href="contact/"><span lang="fr">Contact</span><span lang="de">Kontakt</span></a></li>
+        <li><a href="livraison-retours/"><span lang="fr">Livraison et retours</span><span lang="de">Versand und Rückgabe</span></a></li>
+        <li><a href="impressum/">Impressum</a></li>
+        <li><a href="cgv/"><span lang="fr">CGV</span><span lang="de">AGB</span></a></li>
+        <li><a href="protection-des-donnees/"><span lang="fr">Protection des données</span><span lang="de">Datenschutz</span></a></li>
+      </ul>
+      <span>Schweiz · Suisse · CHF</span>
+    </div>
+    <p class="demo-note"><span lang="fr">Page d'exemple. Les mentions légales et l'adresse de contact sont provisoires.</span><span lang="de">Beispielseite. Impressum und Kontaktadresse sind provisorisch.</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var KEY = "bolzo-lang";
+  var lang = "de";
+  try { var saved = localStorage.getItem(KEY); if (saved === "de" || saved === "fr") lang = saved; } catch (e) {}
+  function applyLang(l){
+    root.classList.toggle("fr", l === "fr");
+    root.lang = l === "de" ? "de-CH" : "fr-CH";
+    document.querySelectorAll("[data-set-lang]").forEach(function(b){
+      b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");
+    });
+  }
+  document.querySelectorAll("[data-set-lang]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var l = b.getAttribute("data-set-lang");
+      applyLang(l);
+      try { localStorage.setItem(KEY, l); } catch (e) {}
+    });
+  });
+  applyLang(lang);
+})();
+</script>
+</body>
+</html>

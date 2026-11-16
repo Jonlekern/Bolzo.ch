@@ -47,6 +47,9 @@ Les deux pages (accueil + KLARSICHT) prêtes pour Shopify : dossier
 | Fichier | Rôle |
 |---|---|
 | `index.html` | Page d'accueil de la boutique (FR/DE) : présentation, produits, pourquoi Bolzo, FAQ |
+| `contact/`, `livraison-retours/` | Pages de service (FR/DE) : contact, livraison et retours |
+| `impressum/`, `cgv/`, `protection-des-donnees/` | Pages légales (FR/DE). **Modèles à compléter** : les passages surlignés en jaune sont à remplir, et les textes sont à faire vérifier par un juriste avant l'ouverture |
+| `404.html` | Page affichée quand un lien n'existe pas |
 | `a-propos/` | Page À propos (FR/DE) : la méthode, les règles, qui est derrière Bolzo |
 | `assets/` | Polices (Overshoot, Malabard et leurs licences), images de la page d'accueil, et `pages.css` : la feuille de style commune à la page À propos et aux pages d'exemple |
 | `.nojekyll` | Réglage technique pour GitHub Pages |
