@@ -82,7 +82,7 @@ html = re.sub(r'(<section class="benefit flip demo".*?</section>)',
               r"{% if section.settings.video_url != blank %}\n\1\n{% endif %}", html, flags=re.S)
 
 # Adresse de contact
-html = html.replace("hello@klarsicht.example", "{{ section.settings.contact_email | default: shop.email }}")
+html = html.replace("hello@bolzo.example", "{{ section.settings.contact_email | default: shop.email }}")
 
 # Avis d'exemple : désactivés par défaut
 must('<section class="reviews"' in html, "bloc des avis introuvable")
@@ -137,7 +137,8 @@ must("img/" not in re.sub(r"\{\{.*?\}\}", "", html), "il reste un lien d'image l
 # ---------- JavaScript ----------
 js = re.search(r"<script>(.*?)</script>", src, re.S).group(1)
 js = js.replace('var root = document.documentElement;', 'var root = document.getElementById("kls");\n  if (!root) return;')
-js = re.sub(r'  var KEY = "klarsicht-lang";\n', "", js)
+js = re.sub(r'  var KEY = "[a-z-]+";\n', "", js)
+js = re.sub(r'    var tm = [^\n]*\n', "", js)
 js = re.sub(r'  var PRICES = \{[^}]*\};\n', "", js)
 js = re.sub(r'  var lang = "(?:fr|de)";\n  try \{[^\n]*\n', '  var lang = root.classList.contains("fr") ? "fr" : "de";\n', js)
 js = re.sub(r'    root\.lang = [^\n]*\n', "", js)

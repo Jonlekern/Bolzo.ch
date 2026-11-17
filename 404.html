@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Page introuvable / Seite nicht gefunden · Bolzo.ch</title>
-<meta name="description" content="Page introuvable sur Bolzo.ch.">
+<title>Seite nicht gefunden · Bolzo.ch</title>
+<meta name="title-de" content="Seite nicht gefunden · Bolzo.ch">
+<meta name="title-fr" content="Page introuvable · Bolzo.ch">
+<meta name="description" content="Seite nicht gefunden auf Bolzo.ch.">
 <script>document.write('<base href="' + (location.hostname.endsWith("github.io") ? "/Bolzo.ch/" : "/") + '">');</script>
 <meta name="robots" content="noindex">
 <link rel="icon" href="marque/favicon.svg" type="image/svg+xml">
@@ -78,6 +80,7 @@
   function applyLang(l){
     root.classList.toggle("fr", l === "fr");
     root.lang = l === "de" ? "de-CH" : "fr-CH";
+    var tm = document.querySelector('meta[name="title-' + l + '"]'); if (tm) document.title = tm.content;
     document.querySelectorAll("[data-set-lang]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");
     });

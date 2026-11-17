@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>À propos / Über uns · Bolzo.ch</title>
-<meta name="description" content="Bolzo.ch : comment on choisit nos produits de niche, et ce que tu ne verras pas chez nous.">
+<title>Über uns · Bolzo.ch</title>
+<meta name="title-de" content="Über uns · Bolzo.ch">
+<meta name="title-fr" content="À propos · Bolzo.ch">
+<meta name="description" content="Bolzo.ch: wie wir unsere Nischenprodukte auswählen und was du bei uns nicht findest.">
 <link rel="icon" href="../marque/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../marque/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../marque/favicon-180.png">
@@ -120,6 +122,7 @@
   function applyLang(l){
     root.classList.toggle("fr", l === "fr");
     root.lang = l === "de" ? "de-CH" : "fr-CH";
+    var tm = document.querySelector('meta[name="title-' + l + '"]'); if (tm) document.title = tm.content;
     document.querySelectorAll("[data-set-lang]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");
     });

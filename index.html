@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bolzo.ch</title>
-<meta name="description" content="Bolzo.ch : des produits de niche pour les passionnés. Livraison gratuite en Suisse, paiement en CHF.">
+<meta name="title-de" content="Bolzo.ch">
+<meta name="title-fr" content="Bolzo.ch">
+<meta name="description" content="Bolzo.ch: Nischenprodukte für Leidenschaftliche. Gratis Versand in der Schweiz, Bezahlung in CHF.">
 <link rel="icon" href="marque/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="marque/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="marque/favicon-180.png">
@@ -90,7 +92,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 .card:hover{border-color:var(--fg)}
 .card img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;background:var(--paper)}
 .card-body{padding:24px;display:grid;gap:12px;align-content:start;min-width:0}
-.tag{justify-self:start;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
+.tag{justify-self:start;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:2px 10px;color:var(--muted)}
 .card-name{font-family:var(--f-klarsicht);font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:.02em;color:var(--red)}
 .card-body p{color:var(--muted)}
 .card-price{font-size:1.05rem;color:var(--fg)}
@@ -144,7 +146,15 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 .foot-row a{color:var(--paper)}
 .demo-note{font-size:.85rem;color:#aab1ba}
 
+@media (pointer:coarse), (max-width:860px){
+  .lang button{min-width:40px;min-height:40px;padding:8px 12px}
+  .site-header .logo{padding-block:9px}
+  .foot-row ul{gap:0 20px}
+  .foot-row a{display:inline-block;padding-block:12px}
+  .link{padding-block:8px}
+}
 @media (max-width:860px){
+  .hero-figure{max-width:440px}
   .hero .wrap{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:40px 48px}
   .grid{grid-template-columns:minmax(0,1fr)}
   .card{grid-column:auto}
@@ -154,8 +164,10 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
   .products .wrap{padding-block:48px}
 }
 @media (max-width:640px){
-  .nav{display:none}
-  .site-header .wrap{justify-content:space-between}
+  .site-header .wrap{flex-wrap:wrap;justify-content:space-between;gap:0 12px;padding-block:6px 0}
+  .nav{order:3;width:100%;flex-wrap:wrap;gap:0 20px;font-size:.95rem;border-top:1px solid var(--line);margin-top:6px}
+  .nav a{padding-block:10px}
+  section[id],.legal .block{scroll-margin-top:calc(128px + env(safe-area-inset-top,0px))}
   .logo img{height:22px}
   .card{grid-template-columns:minmax(0,1fr)}
   .card img{aspect-ratio:4/3}
@@ -365,6 +377,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
     lang = l;
     root.classList.toggle("fr", l === "fr");
     root.lang = l === "de" ? "de-CH" : "fr-CH";
+    var tm = document.querySelector('meta[name="title-' + l + '"]'); if (tm) document.title = tm.content;
     document.querySelectorAll("[data-set-lang]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");
     });

@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Contact / Kontakt · Bolzo.ch</title>
-<meta name="description" content="Contacter Bolzo.ch.">
+<title>Kontakt · Bolzo.ch</title>
+<meta name="title-de" content="Kontakt · Bolzo.ch">
+<meta name="title-fr" content="Contact · Bolzo.ch">
+<meta name="description" content="Bolzo.ch kontaktieren: Fragen zu Produkten, Bestellungen und Rückgaben.">
 <link rel="icon" href="../marque/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../marque/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../marque/favicon-180.png">
@@ -47,20 +49,30 @@
 
 <section class="band">
   <div class="wrap legal">
+    <nav class="toc" aria-label="Inhalt / Sommaire">
+      <p class="eyebrow"><span lang="fr">Sommaire</span><span lang="de">Inhalt</span></p>
+      <ol>
+        <li><a href="#s1"><span lang="fr">Par e-mail</span><span lang="de">Per E-Mail</span></a></li>
+        <li><a href="#s2"><span lang="fr">Pour aller plus vite</span><span lang="de">Damit es schneller geht</span></a></li>
+        <li><a href="#s3"><span lang="fr">Adresse postale</span><span lang="de">Postadresse</span></a></li>
+      </ol>
+    </nav>
+    <div class="legal-body">
     
-    <div class="block">
+    <div class="block" id="s1">
       <h2><span lang="fr">Par e-mail</span><span lang="de">Per E-Mail</span></h2>
       <p class="mailbox"><span class="plain-mail" id="mail">hello@bolzo.example</span><button type="button" class="btn2" id="copy-mail"><span lang="fr">Copier l’adresse</span><span lang="de">Adresse kopieren</span></button><span class="copied" id="copied" role="status" hidden><span lang="fr">Adresse copiée</span><span lang="de">Adresse kopiert</span></span></p>
       <p lang="fr">Nous répondons en allemand et en français, en général sous <mark class="todo"><span lang="fr">2</span><span lang="de">2</span></mark> jours ouvrables.</p><p lang="de">Wir antworten auf Deutsch und Französisch, in der Regel innert <mark class="todo"><span lang="fr">2</span><span lang="de">2</span></mark> Werktagen.</p>
     </div>
-    <div class="block">
+    <div class="block" id="s2">
       <h2><span lang="fr">Pour aller plus vite</span><span lang="de">Damit es schneller geht</span></h2>
       <ul><li><span lang="fr"><b>Commande</b> : indique ton numéro de commande.</span><span lang="de"><b>Bestellung</b>: Gib deine Bestellnummer an.</span></li><li><span lang="fr"><b>Produit abîmé ou défectueux</b> : joins une photo.</span><span lang="de"><b>Beschädigtes oder defektes Produkt</b>: Schick ein Foto mit.</span></li><li><span lang="fr"><b>Retour</b> : lis d'abord la page <a href="../livraison-retours/">Livraison et retours</a>.</span><span lang="de"><b>Rückgabe</b>: Lies zuerst die Seite <a href="../livraison-retours/">Versand und Rückgabe</a>.</span></li><li><span lang="fr"><b>Question fréquente</b> : la réponse est peut-être déjà dans la <a href="../#faq">FAQ</a>.</span><span lang="de"><b>Häufige Frage</b>: Die Antwort steht vielleicht schon in der <a href="../#faq">FAQ</a>.</span></li></ul>
     </div>
-    <div class="block">
+    <div class="block" id="s3">
       <h2><span lang="fr">Adresse postale</span><span lang="de">Postadresse</span></h2>
       <p><mark class="todo"><span lang="fr">Raison sociale</span><span lang="de">Firmenname</span></mark><br><mark class="todo"><span lang="fr">Rue et numéro, NPA, localité</span><span lang="de">Strasse und Nummer, PLZ, Ort</span></mark><br><span lang="fr">Suisse</span><span lang="de">Schweiz</span></p>
       <p lang="fr">Pas de vente sur place. Les retours se font uniquement à l'adresse que nous t'envoyons par e-mail.</p><p lang="de">Kein Verkauf vor Ort. Rücksendungen gehen nur an die Adresse, die wir dir per E-Mail schicken.</p>
+    </div>
     </div>
   </div>
 </section>
@@ -95,6 +107,7 @@
   function applyLang(l){
     root.classList.toggle("fr", l === "fr");
     root.lang = l === "de" ? "de-CH" : "fr-CH";
+    var tm = document.querySelector('meta[name="title-' + l + '"]'); if (tm) document.title = tm.content;
     document.querySelectorAll("[data-set-lang]").forEach(function(b){
       b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === l ? "true" : "false");
     });

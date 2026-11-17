@@ -99,7 +99,7 @@
 .kls .tier-price strong{display:block;font-size:1.15rem;font-weight:600;white-space:nowrap}
 .kls .tier-price s{display:block;font-size:.85rem;color:var(--muted);white-space:nowrap}
 .kls .tier-save{display:block;font-size:.82rem;font-weight:600;color:var(--red);white-space:nowrap}
-.kls .badge{position:absolute;top:-11px;left:50px;background:var(--red);color:var(--paper);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.kls .badge{position:absolute;top:-11px;left:50px;background:var(--red);color:var(--paper);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 .kls .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .kls .unit{font-size:.82rem;color:var(--muted)}
 
@@ -182,7 +182,7 @@
 .kls .review-who{font-size:.95rem;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px}
 .kls .review-body > p[lang]{font-size:.98rem}
 .kls .review-lot{font-size:.84rem;color:var(--muted);margin-top:auto}
-.kls .tag{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted)}
+.kls .tag{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted)}
 @media (max-width:700px){.kls .review-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .kls .more{display:none}
 @media (max-width:520px){
@@ -197,8 +197,8 @@
 /* footer */
 .kls .site-footer{background:var(--fg);color:var(--paper);padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .kls .site-footer .wrap{padding-block:48px 32px;display:grid;gap:28px}
-.kls .site-footer .wordmark{font-size:clamp(3rem,10vw,7rem);line-height:.85;color:var(--paper)}
-.kls .site-footer .tm{font-family:var(--f-body);font-weight:600;font-size:.16em;letter-spacing:.04em;vertical-align:top;position:relative;top:.35em;margin-left:.25em;line-height:1}
+.kls .site-footer .wordmark{font-size:clamp(2.2rem,11.5vw,7rem);white-space:nowrap;line-height:.85;color:var(--paper)}
+.kls .site-footer .tm{font-family:var(--f-body);font-weight:600;font-size:max(.16em,10px);letter-spacing:.04em;vertical-align:top;position:relative;top:.35em;margin-left:.25em;line-height:1}
 .kls .foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid #343a42;padding-top:20px;font-size:.92rem;color:#aab1ba}
 .kls .legal{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;margin:0;padding:0}
 .kls .tagline{font-size:1.2rem;font-weight:500}
@@ -214,6 +214,11 @@
 .kls .bar .mock-msg{margin-top:0;margin-bottom:10px}
 .kls .bar-msg-wrap{padding-top:0}
 
+@media (pointer:coarse), (max-width:860px){
+  .kls .lang button{min-width:40px;min-height:40px;padding:8px 12px}
+  .kls .legal a{display:inline-block;padding-block:12px}
+  .kls .legal{gap:0 20px}
+}
 @media (max-width:860px){
   .kls .product .wrap,.kls .steps .wrap,.kls .benefit .wrap,.kls .faq .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
   .kls .faq .wrap{gap:18px}
@@ -225,7 +230,8 @@
 }
 @media (max-width:640px){
   .kls .site-header .wrap{flex-wrap:wrap;gap:6px 12px;padding-block:10px 0}
-  .kls .nav{order:3;width:100%;gap:20px;font-size:.95rem;border-top:1px solid var(--line);padding-block:6px}
+  .kls .nav{order:3;width:100%;gap:20px;font-size:.95rem;border-top:1px solid var(--line)}
+  .kls .nav a{padding-block:10px}
   .kls .site-header .wordmark{font-size:1.45rem}
   .kls .tier{padding:14px 12px;gap:10px}
   .kls .tier-qty{font-size:1.2rem}
