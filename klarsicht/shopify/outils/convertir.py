@@ -81,6 +81,10 @@ html = html.replace('src="video/demo.mp4"', 'src="{{ section.settings.video_url 
 html = re.sub(r'(<section class="benefit flip demo".*?</section>)',
               r"{% if section.settings.video_url != blank %}\n\1\n{% endif %}", html, flags=re.S)
 
+# Lien retour vers la boutique
+must('href="../#produits"' in html, "lien retour introuvable")
+html = html.replace('href="../#produits"', 'href="{{ routes.root_url }}#produits"')
+
 # Adresse de contact
 html = html.replace("hello@bolzo.example", "{{ section.settings.contact_email | default: shop.email }}")
 

@@ -65,6 +65,10 @@
 /* hero / product */
 .kls .product .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;padding-block:40px 56px;align-items:start}
 .kls #produit,.kls #acheter,.kls #contact,.kls #faq{scroll-margin-top:calc(84px + env(safe-area-inset-top,0px))}
+.kls .back .wrap{padding-block:14px 0}
+.kls .back a{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--muted);padding-block:8px}
+.kls .back a:hover{color:var(--fg)}
+.kls .back svg{width:16px;height:16px}
 .kls .gallery{min-width:0}
 .kls .gallery-main{background:var(--paper);border-radius:var(--radius);overflow:hidden;aspect-ratio:1/1}
 .kls .gallery-main img{width:100%;height:100%;object-fit:contain}
@@ -251,6 +255,7 @@
   <p class="kls-warn">KLARSICHT : ce produit doit avoir 3 variantes (1 + 1, 4×, 6×). Voir shopify/SHOPIFY.md.</p>
 {%- endif -%}
 
+<div class="back"><div class="wrap"><a href="{{ routes.root_url }}#produits"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span lang="fr">Tous les produits · Bolzo.ch</span><span lang="de">Alle Produkte · Bolzo.ch</span></a></div></div>
 <section class="product" id="produit" aria-label="KLARSICHT">
   <div class="wrap">
     <div class="gallery">
